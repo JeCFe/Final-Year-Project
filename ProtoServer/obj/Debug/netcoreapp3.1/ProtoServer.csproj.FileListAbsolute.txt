@@ -1,0 +1,4 @@
+C:\Users\Jessi\OneDrive\Desktop\Proto\ProtoServer\bin\Debug\netcoreapp3.1\ProtoServer.exe
+C:\Users\Jessi\OneDrive\Desktop\Proto\ProtoServer\obj\Debug\netcoreapp3.1\ProtoServer.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Desktop\Proto\ProtoServer\obj\Debug\netcoreapp3.1\ProtoServer.AssemblyInfoInputs.cache
+C:\Users\Jessi\OneDrive\Desktop\Proto\ProtoServer\obj\Debug\netcoreapp3.1\ProtoServer.AssemblyInfo.cs

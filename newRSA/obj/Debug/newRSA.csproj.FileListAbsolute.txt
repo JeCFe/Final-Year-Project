@@ -1,0 +1,6 @@
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\newRSA\obj\Debug\newRSA.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\newRSA\bin\Debug\newRSA.exe.config
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\newRSA\bin\Debug\newRSA.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\newRSA\bin\Debug\newRSA.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\newRSA\obj\Debug\newRSA.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\newRSA\obj\Debug\newRSA.pdb

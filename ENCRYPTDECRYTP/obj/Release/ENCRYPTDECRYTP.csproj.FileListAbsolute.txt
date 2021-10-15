@@ -1,0 +1,5 @@
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\bin\Release\ENCRYPTDECRYTP.exe.config
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\bin\Release\ENCRYPTDECRYTP.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\bin\Release\ENCRYPTDECRYTP.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\obj\Release\ENCRYPTDECRYTP.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\obj\Release\ENCRYPTDECRYTP.pdb

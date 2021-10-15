@@ -1,0 +1,12 @@
+C:\Users\Jessi\OneDrive\Desktop\Proto\ENCRYPTDECRYTP\bin\Debug\ENCRYPTDECRYTP.exe.config
+C:\Users\Jessi\OneDrive\Desktop\Proto\ENCRYPTDECRYTP\bin\Debug\ENCRYPTDECRYTP.exe
+C:\Users\Jessi\OneDrive\Desktop\Proto\ENCRYPTDECRYTP\bin\Debug\ENCRYPTDECRYTP.pdb
+C:\Users\Jessi\OneDrive\Desktop\Proto\ENCRYPTDECRYTP\obj\Debug\ENCRYPTDECRYTP.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Desktop\Proto\ENCRYPTDECRYTP\obj\Debug\ENCRYPTDECRYTP.exe
+C:\Users\Jessi\OneDrive\Desktop\Proto\ENCRYPTDECRYTP\obj\Debug\ENCRYPTDECRYTP.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\bin\Debug\ENCRYPTDECRYTP.exe.config
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\bin\Debug\ENCRYPTDECRYTP.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\bin\Debug\ENCRYPTDECRYTP.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\obj\Debug\ENCRYPTDECRYTP.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\obj\Debug\ENCRYPTDECRYTP.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\ENCRYPTDECRYTP\obj\Debug\ENCRYPTDECRYTP.pdb

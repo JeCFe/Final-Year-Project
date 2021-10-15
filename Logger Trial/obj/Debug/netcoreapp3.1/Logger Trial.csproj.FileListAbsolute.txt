@@ -1,0 +1,24 @@
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Logger Trial.exe
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\obj\Debug\netcoreapp3.1\Logger Trial.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\obj\Debug\netcoreapp3.1\Logger Trial.AssemblyInfoInputs.cache
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\obj\Debug\netcoreapp3.1\Logger Trial.AssemblyInfo.cs
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Logger Trial.deps.json
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Logger Trial.runtimeconfig.json
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Logger Trial.runtimeconfig.dev.json
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Logger Trial.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Logger Trial.pdb
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\obj\Debug\netcoreapp3.1\Logger Trial.csproj.CopyComplete
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\obj\Debug\netcoreapp3.1\Logger Trial.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\obj\Debug\netcoreapp3.1\Logger Trial.pdb
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\Jessi\OneDrive\Desktop\Proto\Logger Trial\bin\Debug\netcoreapp3.1\NLog.config
