@@ -16,3 +16,12 @@ C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\SSL SERVE
 C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\SSL SERVER CLIENT\client\obj\Debug\client.csproj.GenerateResource.cache
 C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\SSL SERVER CLIENT\client\obj\Debug\client.exe
 C:\Users\Jessi\OneDrive\Documents\GitHub\Computer-Science-Year-2\Proto\SSL SERVER CLIENT\client\obj\Debug\client.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL SERVER CLIENT\client\bin\Debug\client.exe.config
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL SERVER CLIENT\client\bin\Debug\client.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL SERVER CLIENT\client\bin\Debug\client.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL SERVER CLIENT\client\obj\Debug\client.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL SERVER CLIENT\client\obj\Debug\client.Form1.resources
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL SERVER CLIENT\client\obj\Debug\client.Properties.Resources.resources
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL SERVER CLIENT\client\obj\Debug\client.csproj.GenerateResource.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL SERVER CLIENT\client\obj\Debug\client.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL SERVER CLIENT\client\obj\Debug\client.pdb

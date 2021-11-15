@@ -42,8 +42,8 @@ namespace server
             var request = new CertificateRequest("cn=JessicaFealy", rsaKeys, HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
             var certificate = request.CreateSelfSigned(DateTimeOffset.Now, DateTimeOffset.Now.AddYears(20));
 
-            File.WriteAllBytes("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Computer-Science-Year-2\\Proto\\SSL SERVER CLIENT\\server\\Certificate.pfx", certificate.Export(X509ContentType.Pfx, "password"));
-            File.WriteAllText("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Computer-Science-Year-2\\Proto\\SSL SERVER CLIENT\\server\\Certificate.cer",
+            File.WriteAllBytes("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\SSL SERVER CLIENT\\serverCertificate.pfx", certificate.Export(X509ContentType.Pfx, "password"));
+            File.WriteAllText("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\SSL SERVER CLIENT\\serverCertificate.cer",
                  "-----BEGIN CERTIFICATE-----\r\n" + Convert.ToBase64String(certificate.Export(X509ContentType.Cert), Base64FormattingOptions.InsertLineBreaks)
                  + "\r\n-----END CERTIFICATE-----");
         }
@@ -59,7 +59,7 @@ namespace server
         static void Main(string[] args)
         {
             ServerEncryptionManager SEM = new ServerEncryptionManager();
-            serverCertificate = X509Certificate.CreateFromCertFile("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Computer-Science-Year-2\\Proto\\SSL SERVER CLIENT\\server\\Certificate.cer");
+            serverCertificate = X509Certificate.CreateFromCertFile("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\SSL SERVER CLIENT\\serverCertificate.cer");
             IPAddress ip = IPAddress.Parse("192.168.0.23");
             TcpListener serverSocket = new TcpListener(ip, 8888);
             TcpClient clientSocket = default(TcpClient);
