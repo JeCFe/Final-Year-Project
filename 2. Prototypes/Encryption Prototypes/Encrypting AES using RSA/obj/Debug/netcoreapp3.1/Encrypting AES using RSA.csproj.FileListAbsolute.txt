@@ -1,0 +1,11 @@
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\obj\Debug\netcoreapp3.1\Encrypting AES using RSA.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\obj\Debug\netcoreapp3.1\Encrypting AES using RSA.AssemblyInfoInputs.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\obj\Debug\netcoreapp3.1\Encrypting AES using RSA.AssemblyInfo.cs
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\bin\Debug\netcoreapp3.1\Encrypting AES using RSA.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\bin\Debug\netcoreapp3.1\Encrypting AES using RSA.deps.json
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\bin\Debug\netcoreapp3.1\Encrypting AES using RSA.runtimeconfig.json
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\bin\Debug\netcoreapp3.1\Encrypting AES using RSA.runtimeconfig.dev.json
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\bin\Debug\netcoreapp3.1\Encrypting AES using RSA.dll
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\bin\Debug\netcoreapp3.1\Encrypting AES using RSA.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\obj\Debug\netcoreapp3.1\Encrypting AES using RSA.dll
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Encrypting AES using RSA\obj\Debug\netcoreapp3.1\Encrypting AES using RSA.pdb

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Encrypting AES using RSA/1.0.0": {
+        "runtime": {
+          "Encrypting AES using RSA.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Encrypting AES using RSA/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
