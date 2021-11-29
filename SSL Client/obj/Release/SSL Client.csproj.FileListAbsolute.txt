@@ -1,0 +1,5 @@
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Client\bin\Release\SSL Client.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Client\bin\Release\SSL Client.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Client\obj\Release\SSL Client.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Client\obj\Release\SSL Client.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Client\obj\Release\SSL Client.pdb
