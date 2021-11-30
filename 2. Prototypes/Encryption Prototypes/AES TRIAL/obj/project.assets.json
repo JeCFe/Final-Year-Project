@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\AES TRIAL\\AES TRIAL.csproj",
+      "projectUniqueName": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Encryption Prototypes\\AES TRIAL\\AES TRIAL.csproj",
       "projectName": "AES TRIAL",
-      "projectPath": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\AES TRIAL\\AES TRIAL.csproj",
+      "projectPath": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Encryption Prototypes\\AES TRIAL\\AES TRIAL.csproj",
       "packagesPath": "C:\\Users\\Jessi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\AES TRIAL\\obj\\",
+      "outputPath": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Encryption Prototypes\\AES TRIAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jessi\\AppData\\Roaming\\NuGet\\NuGet.Config",
