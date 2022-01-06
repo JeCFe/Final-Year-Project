@@ -12,19 +12,27 @@ namespace Encrypting_AES_using_RSA
             var privKey = csp.ExportParameters(true);
             var pubKey = csp.ExportParameters(false);
 
+            var pubCSP = new RSACryptoServiceProvider();
+            pubCSP.ImportParameters(pubKey);
+            string test = pubKey.ToString();
+
+            var privCSP = new RSACryptoServiceProvider();
+            privCSP.ImportParameters(privKey);
+
+
             Console.WriteLine("INPUT MESSAGE");
             string message = Console.ReadLine();
             Aes aesKey = Aes.Create();
             Console.WriteLine(System.Text.Encoding.Default.GetString(aesKey.Key));
-            byte[] encryptedAESKey = csp.Encrypt(aesKey.Key, RSAEncryptionPadding.Pkcs1);
-            byte[] encryptedAESIV = csp.Encrypt(aesKey.IV, RSAEncryptionPadding.Pkcs1);
+            byte[] encryptedAESKey = pubCSP.Encrypt(aesKey.Key, RSAEncryptionPadding.Pkcs1);
+            byte[] encryptedAESIV = pubCSP.Encrypt(aesKey.IV, RSAEncryptionPadding.Pkcs1);
             string strEAesKey = System.Text.Encoding.Default.GetString(encryptedAESKey);
             string strEAesIV = System.Text.Encoding.Default.GetString(encryptedAESIV);
             Console.WriteLine(strEAesKey);
             Console.WriteLine(strEAesIV);
 
-            byte[] decryptedAESKey = csp.Decrypt(encryptedAESKey, RSAEncryptionPadding.Pkcs1);
-            byte[] decryptedAESIV = csp.Decrypt(encryptedAESIV, RSAEncryptionPadding.Pkcs1);
+            byte[] decryptedAESKey = privCSP.Decrypt(encryptedAESKey, RSAEncryptionPadding.Pkcs1);
+            byte[] decryptedAESIV = privCSP.Decrypt(encryptedAESIV, RSAEncryptionPadding.Pkcs1);
             string strDAesKey = System.Text.Encoding.Default.GetString(decryptedAESKey);
             string strDAesIV = System.Text.Encoding.Default.GetString(decryptedAESIV);
             Console.WriteLine(strDAesKey);

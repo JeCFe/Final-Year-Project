@@ -10,6 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Web.Script.Serialization;
+using MongoDB.Driver;
 
 namespace SSL_Server
 {
@@ -66,6 +67,10 @@ namespace SSL_Server
             }
 
         }
+        public static void AccessMangoDB()
+        {
+
+        }
 
     }
 
@@ -104,7 +109,21 @@ namespace SSL_Server
         {
             while (true)
             {
+                try
+                {
+                    string receivedMessage = reader.ReadLine();
+                    Console.WriteLine(receivedMessage);
 
+                    Program.broadcast(receivedMessage);
+                }
+                catch (Exception)
+                {
+
+                    Console.WriteLine("Connection closed");
+                    client.Close();
+                    //Remove Client from client vector
+                    break;
+                }
 
                     /*                    byte[] buffer = new byte[2048];
                                         StringBuilder message = new StringBuilder();
@@ -124,10 +143,7 @@ namespace SSL_Server
 
                                         } while (bytes != 0);
                                         string recievedMessage = message.ToString();*/
-                    string receivedMessage = reader.ReadLine();
-                    Console.WriteLine(receivedMessage);
 
-                    Program.broadcast(receivedMessage);
                 }
 
 

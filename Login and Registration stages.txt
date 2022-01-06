@@ -1,0 +1,31 @@
+Login stages
+Clinet 
+Send code 1 with Email
+	Recieved code 2 with account salt and session salt 
+Send code 2 with hashed password 
+	recieve code 3 with confirmation
+
+
+Server:
+Recieves code 1 - Compare recieved email with account list 
+	Send code 2 with confirmation and the account salt and session salt 
+Recieved code 2 - Compare hashed password with saved hashed password 
+	Send code 3 with confirmation 
+
+
+Registration stages
+Client 
+Send code 1 to tell the server a registration request with email 
+	Recieve code 1 with either an account salt OR notice that email has been taken 
+Send code 2 with all other details including name, email, and hashed password 
+	Recieves code 2 with confirmation account has been added 
+
+Server 
+Recieved code 1 with email and registraion notice 
+	- Checks email against known emails, if common email found:
+		Send code 1 to client notifying email has been taken
+	-if no common email found:
+		Send code 1 to client with a generated account salt 
+Recieved code 1 with name, email, hashedpassword, and account salt 
+	- Add new account to database
+	Send code 3 to client with confirmation of new user being added 

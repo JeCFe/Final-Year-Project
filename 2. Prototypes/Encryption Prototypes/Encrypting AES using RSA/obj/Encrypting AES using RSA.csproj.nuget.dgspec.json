@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\Encrypting AES using RSA\\Encrypting AES using RSA.csproj": {}
+    "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Encryption Prototypes\\Encrypting AES using RSA\\Encrypting AES using RSA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\Encrypting AES using RSA\\Encrypting AES using RSA.csproj": {
+    "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Encryption Prototypes\\Encrypting AES using RSA\\Encrypting AES using RSA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\Encrypting AES using RSA\\Encrypting AES using RSA.csproj",
+        "projectUniqueName": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Encryption Prototypes\\Encrypting AES using RSA\\Encrypting AES using RSA.csproj",
         "projectName": "Encrypting AES using RSA",
-        "projectPath": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\Encrypting AES using RSA\\Encrypting AES using RSA.csproj",
+        "projectPath": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Encryption Prototypes\\Encrypting AES using RSA\\Encrypting AES using RSA.csproj",
         "packagesPath": "C:\\Users\\Jessi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\Encrypting AES using RSA\\obj\\",
+        "outputPath": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Encryption Prototypes\\Encrypting AES using RSA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jessi\\AppData\\Roaming\\NuGet\\NuGet.Config",
