@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Security;
 using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
@@ -35,29 +36,50 @@ namespace Forms_SSL_Client
 
         public Form1()
         {
+
             InitializeComponent();
+
             InitaliseServerConnection();
         }
         private void InitaliseServerConnection()
         {
+            bool connectionEstablished = false;
+            while (!connectionEstablished)
+            {
+                try
+                {
+                    client = new TcpClient(ServerIP, ServerPort);
+                    netStream = client.GetStream();
+                    sslStream = new SslStream(netStream, false, new RemoteCertificateValidationCallback(ValidateCertificate));
+                    sslStream.AuthenticateAsClient("SecureChat");
+                    reader = new StreamReader(sslStream, Encoding.Unicode);
+                    writer = new StreamWriter(sslStream, Encoding.Unicode);
+                    listeningThread = new Thread(new ThreadStart(listenForMessages));
+                    listeningThread.Start();
+                    connectionEstablished = true;
+                }
+                catch (Exception) { }
 
-            client = new TcpClient(ServerIP, ServerPort);
-            netStream = client.GetStream();
-            sslStream = new SslStream(netStream, false, new RemoteCertificateValidationCallback(ValidateCertificate));
-            sslStream.AuthenticateAsClient("SecureChat");
-            reader = new StreamReader(sslStream, Encoding.Unicode);
-            writer = new StreamWriter(sslStream, Encoding.Unicode);
-            listeningThread = new Thread(new ThreadStart(listenForMessages));
-            listeningThread.Start();
-        
+            }
         }
         delegate void DecodeMessageDelegate(string message);
         private void listenForMessages()
         {
-            while (true)
+            bool connected = true;
+            while (connected)
             {
-                string recievedMessage = reader.ReadLine();
-                DecodeMessage(recievedMessage);
+                try
+                {
+                    string recievedMessage = reader.ReadLine();
+                    DecodeMessage(recievedMessage);
+                }
+                catch (Exception)
+                {
+                    //Set up reconnection processes
+                    connected = false;
+                    MessageBox.Show("Unknown error with server connection");
+                }
+
             }
         }
 
@@ -88,6 +110,7 @@ namespace Forms_SSL_Client
                         LoginManager(M);
                         break;
                     case "2"://Registration
+                        RegistrationManager(M);
                         break;
                     case "3": //Standard Message
                         CommonCommunications(M);
@@ -115,6 +138,8 @@ namespace Forms_SSL_Client
             writer.Flush();
             txtMsgToSend.Text = "";
         }
+
+
         private void LoginBegin() //Begins login steps 
         {
             LINFO.Email = txtUserEmail.Text;
@@ -135,24 +160,31 @@ namespace Forms_SSL_Client
             switch (LINFO.stage)
             {
                 case "2":
-                    PasswordHasher(LINFO);
+                    LogInSecondStage(LINFO);
                     break;
                 case "3":
-                    ConfimationValidator(LINFO.confirmation);
+                    LogInFinalStage(LINFO.confirmation);
                     break;
                 default:
                     break;
             }
         }
-
-        private void PasswordHasher(LoginInformation LINFO) //Client stage 2
+        private string PreformPBKDF2Hash(string accountHashedPassword, byte[] salt)
+        {
+            int iterations = 10000;
+            Rfc2898DeriveBytes hash = new Rfc2898DeriveBytes(accountHashedPassword, salt, iterations);
+            return Convert.ToBase64String(hash.GetBytes(128));
+        }
+        private void LogInSecondStage(LoginInformation LINFO) //Client stage 2
         {
             if (LINFO.confirmation == "true")
             {
                 string plainTextPassword = txtPassword.Text;
+                string accountPasswordHash = PreformPBKDF2Hash(plainTextPassword, Convert.FromBase64String(LINFO.accountSalt));
+                string authenticationToken = PreformPBKDF2Hash(accountPasswordHash, Convert.FromBase64String(LINFO.sessionSalt));
                 //Hash with accountSalt
                 //Hash with sessionSalt 
-                LINFO.passwordHash = plainTextPassword;
+                LINFO.passwordHash = authenticationToken;
                 LINFO.stage = "2";
                 JavaScriptSerializer Serializer = new JavaScriptSerializer();
                 string LINFOmessage = Serializer.Serialize(LINFO);
@@ -168,17 +200,87 @@ namespace Forms_SSL_Client
             }
 
         }
-
-        private void ConfimationValidator(string confirmation)
+        private void LogInFinalStage(string confirmation)
         {
             if (confirmation == "true")
             {
-                MessageBox.Show("ACCOUNT VALID");
+                MessageBox.Show("Successfully Logged in");
+                ElementVisability();
             }
             else
             {
-                MessageBox.Show("YA WRONG");
+                MessageBox.Show("Unsuccessful");
             }
+        }//Client stage 3
+
+        private void RegistrationBegin() //Request salt from server
+        {
+            RINFO.stage = "1";
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            string RINFOmessage = serializer.Serialize(RINFO);
+            M.id = "2";
+            M.message = RINFOmessage;
+            string message = serializer.Serialize(M);
+            writer.WriteLine(message);
+            writer.Flush();
+        }
+        private void RegistrationManager(Message M)
+        {
+            JavaScriptSerializer Deserialiser = new JavaScriptSerializer();
+            RINFO = Deserialiser.Deserialize<RegistrationInformation>(M.message);
+            switch (RINFO.stage)
+            {
+                case "1": //Recieve either account salt or confirmation that email has been taken
+                    RegistrationSecondStage(RINFO);
+                    break;
+                case "2": //Recieve confirmation account has been created
+                    RegistrationFinalStage(RINFO);
+                    break;
+            }
+        }
+
+        private void RegistrationSecondStage(RegistrationInformation RINFO)
+        {
+            Message M = new Message();
+            if (RINFO.confirmation == "true") //Can continue with registraion
+            {
+                string hashedPassword = PreformPBKDF2Hash(txtRegPassword.Text, Convert.FromBase64String(RINFO.AccountSalt));
+                RINFO.Email = txtRegEmail.Text;
+                RINFO.Name = txtUsername.Text;
+                RINFO.PasswordHash = hashedPassword;
+                RINFO.stage = "2";
+                JavaScriptSerializer Serializer = new JavaScriptSerializer();
+                string RINFOmessage = Serializer.Serialize(RINFO);
+                M.id = "2";
+                M.message = RINFOmessage;
+                string message = Serializer.Serialize(M);
+                writer.WriteLine(message);
+                writer.Flush();
+            }
+            else { MessageBox.Show("Unknown error occurred, please try again"); }
+
+
+        }
+        private void RegistrationFinalStage(RegistrationInformation RINFO)
+        {
+            if (RINFO.confirmation == "true")
+            {
+                MessageBox.Show("Account added");
+            }
+            else { MessageBox.Show("Error with registring account"); }
+        }
+        private void ElementVisability()
+        {
+            txtMessageBox.Visible = true;
+            txtMsgToSend.Visible = true;
+            btnSend.Visible = true;
+
+            gBXLogin.Visible = false;
+            gBXRegistraion.Visible = false;
+            Form1 form1 = this;
+            form1.Height = 527;
+            form1.Width = 395;
+
         }
         private void btnSend_Click(object sender, EventArgs e)
         {
@@ -194,10 +296,19 @@ namespace Forms_SSL_Client
         private void btnlogin_Click(object sender, EventArgs e)
         {
             LoginBegin();
+
+        }
+
+        private void btnReg_Click(object sender, EventArgs e)
+        {
+            RegistrationBegin();
         }
 
 
+
     }
+
+
     class Message //Default message recieved 
     {
         public string id;
@@ -226,6 +337,8 @@ namespace Forms_SSL_Client
         public string Email;
         public string PasswordHash;
         public string AccountSalt;
+        public string stage;
+        public string confirmation;
     }
     class StandardMessage //ID CODE 3
     {

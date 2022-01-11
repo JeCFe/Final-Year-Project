@@ -46,6 +46,8 @@ namespace SSL_Server
         public string Email;
         public string PasswordHash;
         public string AccountSalt;
+        public string stage;
+        public string confirmation;
     }
     class StandardMessage //ID CODE 3
     {
@@ -72,6 +74,7 @@ namespace SSL_Server
         protected string Email;
         protected string Hash;
         protected string Salt;
+        protected bool loggedIn;
 
         public AccountData(BsonDocument data)
         {
@@ -79,11 +82,22 @@ namespace SSL_Server
             Email = data["Email"].AsString;
             Hash = data["Hash"].AsString;
             Salt = data["Salt"].AsString;
+            loggedIn = false;
+        }
+        public AccountData(RegistrationInformation RINFO)
+        {
+            Name = RINFO.Name;
+            Email = RINFO.Email;
+            Hash = RINFO.PasswordHash;
+            Salt = RINFO.AccountSalt;
+            loggedIn = false;
         }
         public string getName() { return Name; }
         public string getEmail() { return Email; }
         public string getHash() { return Hash; }
         public string getSalt() { return Salt; }
+        public bool getLoggedIn() { return loggedIn; }
+        public void setLoggedIn(bool log) { loggedIn = log; }
     }
     class AuthenticationInformation
     {
@@ -152,12 +166,50 @@ namespace SSL_Server
             }
             return aLog;
         }
+
+        public bool LogInUser(AccountData ad)
+        {
+            int index = accountData.IndexOf(ad);
+            AccountData reviewAccount = accountData[index];
+            if (reviewAccount.getLoggedIn() == false) //If no account logged in under that account
+            {
+                reviewAccount.setLoggedIn(true); //Mark that account has logged in 
+                accountData[index] = reviewAccount;
+                return true;
+            }
+            else //if account already logged in
+            {
+                return false;
+            }
+        }
+        private void UpdateUserDatabase(AccountData ad)
+        {
+            MongoClient dsClient = new MongoClient("mongodb://ServerAccess:k2KNmJpNUlvGtNJG@accounts-shard-00-00.rhuha.mongodb.net:27017," +
+                                     "accounts-shard-00-01.rhuha.mongodb.net:27017,accounts-shard-00-02.rhuha.mongodb.net:27017/Accounts?ssl=true&replicaSet=atlas-18hn6b-shard-0&authSource=admin&retryWrites=true&w=majority");
+
+            IMongoDatabase dab = dsClient.GetDatabase("accountsDB");
+            var AccountDetails = dab.GetCollection<BsonDocument>("account");
+            var document = new BsonDocument
+            {
+                {"Email", ad.getEmail() },
+                {"Hash", ad.getHash() },
+                {"Salt", ad.getSalt() },
+                {"Name", ad.getName() }
+            };
+            AccountDetails.InsertOneAsync(document); //Update database
+        }
+        public void RegNewAccount(AccountData ad)
+        {
+            accountData.Add(ad);
+            UpdateUserDatabase(ad);
+        }
     }
 
     class Authenticator
     {
         private AuthenticationInformation Ainfo;
-        public Authenticator()
+        int a = 0;
+        public void Initalise()
         {
             Ainfo = new AuthenticationInformation();
         }
@@ -172,21 +224,36 @@ namespace SSL_Server
 
             return true;
         }
+        public string PreformPBKDF2Hash(string accountHashedPassword, byte[] salt)
+        {
+            int iterations = 10000;
+            Rfc2898DeriveBytes hash = new Rfc2898DeriveBytes(accountHashedPassword, salt, iterations);
+            return Convert.ToBase64String(hash.GetBytes(128));
+
+        }
         public AccountData UserLookupRequest(string email)
         {
             //This will need to be mutex locked
             AccountData ad = Ainfo.ClientLookupRequest(email);
             return ad;
         }
-        public string GenerateSessionSalt()
+        public bool LogUserIn(AccountData ad)
+        {
+            return Ainfo.LogInUser(ad);
+        }
+        public byte[] GenerateSalt()
         {
             string sessionSalt = "";
             RNGCryptoServiceProvider random = new RNGCryptoServiceProvider();
-            byte[] buffer = new byte[1024];
-            random.GetBytes(buffer);
-            sessionSalt = BitConverter.ToString(buffer);
-            return sessionSalt;
+            byte[] salt = new byte[128];
+            random.GetBytes(salt);
+            return salt;
         }
+        public void RegNewAccount(AccountData ad)
+        {
+            Ainfo.RegNewAccount(ad);
+        }
+
     }
     
 
@@ -203,14 +270,18 @@ namespace SSL_Server
         {
             InitaliseRSA();
             auth = new Authenticator();
+            auth.Initalise();
             auth.validateAdmin();
             Program p = new Program();
 
         }
-        public static string GenerateSessionSalt()
+
+        public AccountData AccountLookup(string email)
         {
-            string sessionSalt = auth.GenerateSessionSalt();
-            return sessionSalt;
+            //Lock
+            AccountData ad = auth.UserLookupRequest(email);
+            return ad;
+
         }
         public static void InitaliseRSA()
         {
@@ -224,16 +295,25 @@ namespace SSL_Server
             server.Start();
             Listen();
         }
+        public bool LogUserIn(AccountData ad)
+        {
+            return auth.LogUserIn(ad);
+        }
         void Listen()
         {
             while (running)
             {
                 TcpClient tcpClient = server.AcceptTcpClient();
-
-                ClientHandler client = new ClientHandler(tcpClient, this, auth);
-                clientHandlers.Add(client);
+                byte[] salt = auth.GenerateSalt();
+                ClientHandler client = new ClientHandler(tcpClient, this, salt); //Creates new client instance, runs on seperate threads
+                clientHandlers.Add(client); //Adds client to clienthandlers
             }
 
+        }
+        public void removeClientFromClientList(ClientHandler client)
+        {
+            //lock
+            clientHandlers.Remove(client);
         }
         public static void broadcast(string msg)
         {
@@ -243,9 +323,16 @@ namespace SSL_Server
             }
 
         }
-        public static void AccessMongoDB()
+        public string GenerateAccountSalt()
         {
-            
+            //Lock
+            string salt = Convert.ToBase64String(auth.GenerateSalt());
+            return salt;
+        }
+        public void RegNewAccount(AccountData ad)
+        {
+            //lock
+            auth.RegNewAccount(ad);
 
         }
 
@@ -257,27 +344,25 @@ namespace SSL_Server
     class ClientHandler
     {
         Program prog;
-        Authenticator auth;
         public TcpClient client;
         public NetworkStream netStream;
         public SslStream sslStream;
         private StreamWriter writer;
         private StreamReader reader;
-        private string sessionSalt;
+        private byte[] sessionSalt;
         //All types of messages that can be recieved
 
         HandShakeMessage HSM = new HandShakeMessage();
 
-        RegistrationInformation RINFO = new RegistrationInformation();
+
 
         AccountData ClientUser = null;
 
-        public ClientHandler(TcpClient clientSocket, Program p, Authenticator authenticate)
+        public ClientHandler(TcpClient clientSocket, Program p, byte[] sSalt)
         {
             prog = p;
-            auth = authenticate;
             client = clientSocket;
-            sessionSalt = auth.GenerateSessionSalt();
+            sessionSalt = sSalt;
             (new Thread(new ThreadStart(SetupConn))).Start();
         }
 
@@ -295,20 +380,32 @@ namespace SSL_Server
 
                 Thread messageThread = new Thread(ReadMessage);
                 messageThread.Start();
-                Console.WriteLine("Test");
+
             }
             catch { }
         }
 
         private void CommonCommunications(Message M)
         {
+            StandardMessage SM = new StandardMessage();
+
+            JavaScriptSerializer Deserializer = new JavaScriptSerializer();
+            SM = Deserializer.Deserialize<StandardMessage>(M.message);
+            string amendedMessage = ClientUser.getName() + ": " + SM.message;
+
             JavaScriptSerializer Serializer = new JavaScriptSerializer();
+            SM.message = amendedMessage;
+            string SMstring = Serializer.Serialize(SM);
+
+            M.message = SMstring;
+            M.id = "3";
             string messageToSend = Serializer.Serialize(M);
             Program.broadcast(messageToSend);
         }
         private void ReadMessage()
         {
-            while (true)
+            bool clientConnected = true;
+            while (clientConnected)
             {
                 try
                 {
@@ -322,9 +419,10 @@ namespace SSL_Server
                         case "0": //HandShake
                             break;
                         case "1": //Login
-                            LoginManager(M);
+                             LoginManager(M);
                             break;
                         case "2"://Registration
+                            RegistrationManager(M);
                             break;
                         case "3": //Standard Message
                             CommonCommunications(M);
@@ -338,15 +436,57 @@ namespace SSL_Server
                 }
                 catch (Exception)
                 {
-
+                    clientConnected = false; //Ends the infinte loop
+                    prog.removeClientFromClientList(this); //Ensures removal of client from client list
+                    client.Close(); //Closes client connection
                     Console.WriteLine("Connection closed");
-                    client.Close();
-                    //Remove Client from client vector
-                    break;
                 }
 
-            }
+             }
 
+        }
+        private void RegistrationManager(Message M)
+        {
+            RegistrationInformation RINFO = new RegistrationInformation();
+            JavaScriptSerializer Deserializer = new JavaScriptSerializer();
+            RINFO = Deserializer.Deserialize<RegistrationInformation>(M.message);
+            switch (RINFO.stage)
+            {
+                case "1":
+                    RegistraionStageOne(RINFO); //Checking to make sure email hasnt been taken
+                    break;
+                case "2":
+                    RegistrationFinalStage(RINFO);
+                    break;
+                default:
+                    break;
+            }
+        }
+        private void RegistraionStageOne(RegistrationInformation RINFO) //Send client salt
+        {
+            Message M = new Message();
+            JavaScriptSerializer Serializer = new JavaScriptSerializer();
+            RINFO.stage = "1";
+            RINFO.AccountSalt = prog.GenerateAccountSalt();
+            RINFO.confirmation = "true";
+            string RINFOmessage = Serializer.Serialize(RINFO);
+            M.id = "2";
+            M.message = RINFOmessage;
+            string message = Serializer.Serialize(M);
+            SendMessage(message);
+        }
+        private void RegistrationFinalStage(RegistrationInformation RINFO)
+        {
+            AccountData ad = new AccountData(RINFO);
+            if (prog.AccountLookup(ad.getEmail()) == null) //If no match for email
+            {
+                RINFO.confirmation = "true";
+                prog.RegNewAccount(ad);
+            }
+            else
+            {
+                RINFO.confirmation = "false";
+            }
         }
         private void LoginManager(Message M)
         {
@@ -358,24 +498,65 @@ namespace SSL_Server
                 case "1": //Recieved lookup email
                     LookupEmail(LINFO);
                     break;
+                case "2":
+                    HashComparision(LINFO);
+                    break;
                 default:
                     break;
             }
         }
+        private void HashComparision(LoginInformation LINFO)
+        {
+            //determine whether the use has logged in first
+            Message M = new Message();
+            if (ClientUser != null) //Ensures clienthandler has a current user being queried 
+            {
+                //Should have authentication token from client in LINFO
+                Authenticator auth = new Authenticator();
+                string authenticationToken = auth.PreformPBKDF2Hash(ClientUser.getHash(), sessionSalt);
+                if (authenticationToken == LINFO.passwordHash) //Compare login tokens
+                {
+                    if (prog.LogUserIn(ClientUser)) //If no client already logged in under that name
+                    {
+                        LINFO.confirmation = "true"; //will tell client that they have succcessfully logged in
+                    }
+                    else
+                    {
+                        LINFO.confirmation = "false"; //will tell client they havent logged in
+                        ClientUser = null; //deletes old clientUser data
+                    }
+                }
+                else
+                {
+                    LINFO.confirmation = "false"; //Incorrect password
+                    ClientUser = null;
+                }
+                LINFO.stage = "3";
+
+                JavaScriptSerializer Serializer = new JavaScriptSerializer();
+                string LINFOmessage = Serializer.Serialize(LINFO);
+                M.id = "1";
+                M.message = LINFOmessage;
+                string message = Serializer.Serialize(M);
+                SendMessage(message);
+            }
+
+        }
         private void LookupEmail(LoginInformation LINFO)
         {
             Message M = new Message();
-            ClientUser = auth.UserLookupRequest(LINFO.Email);
+            ClientUser = prog.AccountLookup(LINFO.Email); //returns null if no account found
             if (ClientUser != null) //Account found
             {
 
                 LINFO.accountSalt = ClientUser.getSalt();
-                LINFO.sessionSalt = sessionSalt;
+                LINFO.sessionSalt = Convert.ToBase64String(sessionSalt);
+                LINFO.confirmation = "true";
             }
             else //Account not found
             {
                 LINFO.confirmation = "False";
-
+                
             }
             LINFO.stage = "2";
             JavaScriptSerializer Serializer = new JavaScriptSerializer();
@@ -383,16 +564,12 @@ namespace SSL_Server
             M.id = "1";
             M.message = LINFOmessage;
             string message = Serializer.Serialize(M);
-            writer.WriteLine(message);
-            writer.Flush();
+            SendMessage(message);
         }
         public void SendMessage(string message)
         {
             writer.WriteLine(message);
             writer.Flush();
-            /* byte[] messageToSend = Encoding.UTF8.GetBytes(message);
-             sslStream.Write(messageToSend);
-             sslStream.Flush();*/
         }
     }
 }
