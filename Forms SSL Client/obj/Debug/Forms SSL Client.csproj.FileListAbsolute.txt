@@ -14,3 +14,4 @@ C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\obj
 C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\obj\Debug\Forms SSL Client.exe
 C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\obj\Debug\Forms SSL Client.pdb
 C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\obj\Debug\Forms_SSL_Client.Form1.resources
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\bin\Debug\Forms SSL Client.exe.config

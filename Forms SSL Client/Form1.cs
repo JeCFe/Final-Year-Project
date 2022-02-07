@@ -5,6 +5,8 @@ using System.Linq;
 using System.Net.Security;
 using System.Net.Sockets;
 using System.Security.Cryptography;
+
+
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
@@ -13,12 +15,15 @@ using System.Windows.Forms;
 
 namespace Forms_SSL_Client
 {
-   
+
 
     public partial class Form1 : Form
     {
-        public string ServerIP { get { return "192.168.0.23"; } }
-        public int ServerPort { get { return 2000; } }
+
+        Authenticator auth = new Authenticator();
+        //public string ServerIP { get { return "192.168.0.23"; } }
+        public string ServerIP { get { return "82.28.214.91"; } }
+        public int ServerPort { get { return 2556; } }
 
         TcpClient client;
         NetworkStream netStream;
@@ -58,7 +63,9 @@ namespace Forms_SSL_Client
                     listeningThread.Start();
                     connectionEstablished = true;
                 }
-                catch (Exception) { }
+                catch (Exception) {
+                    MessageBox.Show("FUCK");
+                }
 
             }
         }
@@ -105,6 +112,7 @@ namespace Forms_SSL_Client
                 switch (M.id)
                 {
                     case "0": //HandShake
+                        HandShakeManager(M);
                         break;
                     case "1": //Login
                         LoginManager(M);
@@ -124,7 +132,25 @@ namespace Forms_SSL_Client
         {
             return true; // Allow untrusted certificates.
         }
-
+        private void HandShakeManager(Message M)
+        {
+            JavaScriptSerializer Deserializer = new JavaScriptSerializer();
+            JavaScriptSerializer Serializer = new JavaScriptSerializer();
+            HSM = Deserializer.Deserialize<HandShakeMessage>(M.message);
+            if (HSM.stage == "1")
+            {
+                HSM.EncryptedAESIV = auth.getEncryptedAesIV(HSM.RSAPublicKey);
+                HSM.EncryptedAESKey = auth.getEncryptedAesKey(HSM.RSAPublicKey);
+                HSM.test = auth.encryptMessage("Test");
+                HSM.stage = "1";
+                string HSMmessage = Serializer.Serialize(HSM);
+                M.id = "0";
+                M.message = HSMmessage;
+                string mMessage = Serializer.Serialize(M);
+                writer.WriteLine(mMessage);
+                writer.Flush();
+            }
+        }
         private void SendMessage() //Sends basic message
         {
             JavaScriptSerializer Serializer = new JavaScriptSerializer();
@@ -307,6 +333,87 @@ namespace Forms_SSL_Client
 
 
     }
+    class Authenticator
+    {
+        Aes aesKey;
+        public Authenticator()
+        {
+            aesKey = Aes.Create();
+        }
+        public string encryptMessage(string message)
+        {
+            try
+            {
+                byte[] encryptedData;
+                string encryptedString = "";
+                ICryptoTransform encryptor = aesKey.CreateEncryptor();
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                            swEncrypt.Write(message);
+                        }
+                        encryptedData = msEncrypt.ToArray();
+                    }
+                }
+                encryptedString = Encoding.Unicode.GetString(encryptedData);
+                return encryptedString;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+        public string decryptMessage(string message)
+        {
+            try
+            {
+                string decryptedString = "";
+                byte[] encryptedData = Encoding.Unicode.GetBytes(message);
+                ICryptoTransform decryptor = aesKey.CreateDecryptor();
+                using (MemoryStream msDecrypt = new MemoryStream(encryptedData))
+                {
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        {
+                            decryptedString = srDecrypt.ReadToEnd();
+                        }
+                    }
+                }
+                return decryptedString;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+        public byte[] getEncryptedAesKey(string key)
+        {
+            var pubCSP = new RSACryptoServiceProvider();
+            pubCSP.FromXmlString(key);
+            byte[] byteEncryptedAES = pubCSP.Encrypt(aesKey.Key, RSAEncryptionPadding.Pkcs1);
+            //key = Encoding.Unicode.GetString(byteEncryptedAES);
+            return byteEncryptedAES;
+        }
+        public byte[] getEncryptedAesIV(string key)
+        {
+            string iv;
+            var pubCSP = new RSACryptoServiceProvider();
+            pubCSP.FromXmlString(key);
+           byte[] byteEncryptedAES = pubCSP.Encrypt(aesKey.IV, RSAEncryptionPadding.Pkcs1);
+
+
+            //iv = Encoding.Unicode.GetString(byteEncryptedAES);
+            return byteEncryptedAES;
+        }
+    }
 
 
     class Message //Default message recieved 
@@ -316,11 +423,13 @@ namespace Forms_SSL_Client
     }
     class HandShakeMessage //ID CODE 0
     {
+        public string stage;
+        public string test;
         public string RSAPublicKey;
-        public string EncryptedAESKey;
-        public string EncryptedAESIV;
+        public byte[] EncryptedAESKey;
+        public byte[] EncryptedAESIV;
         public bool Confirmation;
-        public string SessionSalt;
+
     }
     class LoginInformation //ID CODE 1
     {

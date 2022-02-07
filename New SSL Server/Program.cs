@@ -18,6 +18,7 @@ using MongoDB.Driver;
 
 namespace SSL_Server
 {
+
     class Message //Default message recieved 
     {
         public string id;
@@ -25,11 +26,12 @@ namespace SSL_Server
     }
     class HandShakeMessage //ID CODE 0
     {
+        public string stage;
+        public string test;
         public string RSAPublicKey;
-        public string EncryptedAESKey;
-        public string EncryptedAESIV;
+        public byte[] EncryptedAESKey;
+        public byte[] EncryptedAESIV;
         public bool Confirmation;
-        public string SessionSalt;
     }
     class LoginInformation //ID CODE 1
     {
@@ -208,10 +210,46 @@ namespace SSL_Server
     class Authenticator
     {
         private AuthenticationInformation Ainfo;
-        int a = 0;
+        private RSAParameters pubKey;
+        private RSAParameters privKey;
+        private string stringPubKey;
+
         public void Initalise()
         {
             Ainfo = new AuthenticationInformation();
+            exportKeys();
+        }
+        private void exportKeys()
+        {
+            var csp = new RSACryptoServiceProvider(2048);
+            privKey = csp.ExportParameters(true);
+            pubKey = csp.ExportParameters(false);
+            stringPubKey = csp.ToXmlString(false);
+        }
+        public string getPublicRSA()
+        {
+            return stringPubKey;
+        }
+        public byte[] decryptAESMessage(byte[] message)
+        {
+            try
+            {
+
+                var privCSP = new RSACryptoServiceProvider();
+                var pubCSP = new RSACryptoServiceProvider();
+                pubCSP.FromXmlString(stringPubKey);
+                privCSP.ImportParameters(privKey);
+                byte[] decryptedBytes = privCSP.Decrypt(message, RSAEncryptionPadding.Pkcs1);
+
+                return decryptedBytes;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
         }
         public bool validateAdmin()
         {
@@ -260,18 +298,27 @@ namespace SSL_Server
     class Program
     {
         public IPAddress ip = IPAddress.Parse("192.168.0.23");
-        public int port = 2000;
+
+
+        public int port = 2556;
         public bool running = true;
         public TcpListener server;
-        public X509Certificate2 cert = new X509Certificate2("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\SSL Server\\server.pfx", "SecureChat");
+        public  X509Certificate2 cert = new X509Certificate2("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\New SSL Server\\server.pfx", "SecureChat");
+
         public static List<ClientHandler> clientHandlers = new List<ClientHandler>();
         public static Authenticator auth;
+
+
         static void Main(string[] args)
         {
+
             InitaliseRSA();
             auth = new Authenticator();
             auth.Initalise();
             auth.validateAdmin();
+
+
+
             Program p = new Program();
 
         }
@@ -335,6 +382,16 @@ namespace SSL_Server
             auth.RegNewAccount(ad);
 
         }
+        public byte[] decryptAESKey(byte[] message)
+        {
+            //needs to lock
+            return auth.decryptAESMessage(message);
+        }
+        public string getPublicKey()
+        {
+            return auth.getPublicRSA();
+
+        }
 
     }
 
@@ -350,9 +407,12 @@ namespace SSL_Server
         private StreamWriter writer;
         private StreamReader reader;
         private byte[] sessionSalt;
+        Aes aesKey = Aes.Create();
+        RSA privateKey;
+        RSA publicKey;
         //All types of messages that can be recieved
 
-        HandShakeMessage HSM = new HandShakeMessage();
+
 
 
 
@@ -363,7 +423,32 @@ namespace SSL_Server
             prog = p;
             client = clientSocket;
             sessionSalt = sSalt;
+
             (new Thread(new ThreadStart(SetupConn))).Start();
+        }
+        //void testEncryption()
+        //{
+        //    byte[] test1 = publicKey.Encrypt(Encoding.Unicode.GetBytes("T"), RSAEncryptionPadding.Pkcs1);
+        //    byte[] test2 = privateKey.Decrypt(test1, RSAEncryptionPadding.Pkcs1);
+        //    string test = Encoding.Unicode.GetString(test2);
+        //    TesterFunction tester = new TesterFunction();
+        //    tester.message = test1;
+        //    JavaScriptSerializer Sr = new JavaScriptSerializer();
+        //    string message = Sr.Serialize(tester);
+        //    testDecryption(message);
+        //}
+        //void testDecryption(string message)
+        //{
+        //    TesterFunction tester = new TesterFunction();
+        //    JavaScriptSerializer Deserializer = new JavaScriptSerializer();
+        //    tester = Deserializer.Deserialize<TesterFunction>(message);
+        //    byte[] test2 = privateKey.Decrypt(tester.message, RSAEncryptionPadding.Pkcs1);
+        //    //string show = Encoding.Unicode.GetString(test2);
+        //}
+        void testRSA()
+        {
+             privateKey = prog.cert.GetRSAPrivateKey();
+            publicKey = prog.cert.GetRSAPublicKey();
         }
 
         void SetupConn()
@@ -377,9 +462,10 @@ namespace SSL_Server
                 Console.WriteLine("Connection Authenticated");
                 reader = new StreamReader(sslStream, Encoding.Unicode);
                 writer = new StreamWriter(sslStream, Encoding.Unicode);
-
+                testRSA();
                 Thread messageThread = new Thread(ReadMessage);
                 messageThread.Start();
+                InitaliseHandshake();
 
             }
             catch { }
@@ -417,6 +503,7 @@ namespace SSL_Server
                     switch (M.id)
                     {
                         case "0": //HandShake
+                            HandshakeManager(M);
                             break;
                         case "1": //Login
                              LoginManager(M);
@@ -444,6 +531,38 @@ namespace SSL_Server
 
              }
 
+        }
+        private void InitaliseHandshake()
+        {
+            HandShakeMessage HSM = new HandShakeMessage();
+            Message M = new Message();
+            M.id = "0";
+
+            string rsa = prog.getPublicKey();
+            HSM.stage = "1";
+            HSM.RSAPublicKey = rsa;
+            JavaScriptSerializer Serializer = new JavaScriptSerializer();
+            string HSMstring = Serializer.Serialize(HSM);
+            M.message = HSMstring;
+            string Mmessage = Serializer.Serialize(M);
+            SendMessage(Mmessage);
+
+        }
+        private void HandshakeManager(Message M)
+        {
+            HandShakeMessage HSM = new HandShakeMessage();
+            JavaScriptSerializer Deserializer = new JavaScriptSerializer();
+            HSM = Deserializer.Deserialize<HandShakeMessage>(M.message);
+            if (HSM.stage == "1")
+            {
+                aesKey.Key = prog.decryptAESKey(HSM.EncryptedAESKey);
+                aesKey.IV = prog.decryptAESKey(HSM.EncryptedAESIV);
+
+                if (decryptMessage(HSM.test) == "Test")
+                {
+                    Console.WriteLine("Success");
+                }
+            }
         }
         private void RegistrationManager(Message M)
         {
@@ -570,6 +689,60 @@ namespace SSL_Server
         {
             writer.WriteLine(message);
             writer.Flush();
+        }
+        public string encryptMessage(string message)
+        {
+            try
+            {
+                byte[] encryptedData;
+                string encryptedString = "";
+                ICryptoTransform encryptor = aesKey.CreateEncryptor();
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                            swEncrypt.Write(message);
+                        }
+                        encryptedData = msEncrypt.ToArray();
+                    }
+                }
+                encryptedString = Encoding.Unicode.GetString(encryptedData);
+                return encryptedString;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+        public string decryptMessage(string message)
+        {
+            try
+            {
+                string decryptedString = "";
+                byte[] encryptedData = Encoding.Unicode.GetBytes(message);
+                ICryptoTransform decryptor = aesKey.CreateDecryptor();
+                using (MemoryStream msDecrypt = new MemoryStream(encryptedData))
+                {
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        {
+                            decryptedString = srDecrypt.ReadToEnd();
+                        }
+                    }
+                }
+                return decryptedString;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
     }
 }
