@@ -3,3 +3,10 @@ C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\bin\Debug
 C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\bin\Debug\SSL Server.pdb
 C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\obj\Debug\SSL Server.exe
 C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\obj\Debug\SSL Server.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\bin\Debug\libzstd.dll
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\bin\Debug\snappy32.dll
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\bin\Debug\snappy64.dll
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\bin\Debug\libsnappy64.so
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\bin\Debug\libzstd.so
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\bin\Debug\libsnappy64.dylib
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Server\bin\Debug\libzstd.dylib

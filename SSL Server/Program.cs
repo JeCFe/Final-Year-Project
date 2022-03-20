@@ -10,7 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Web.Script.Serialization;
-using MongoDB.Driver;
+//sing MongoDB.Driver;
 
 namespace SSL_Server
 {
@@ -25,7 +25,7 @@ namespace SSL_Server
     class Program
     {
         public  IPAddress ip = IPAddress.Parse("192.168.0.23");
-        public  int port = 2000;
+        public  int port = 2556;
         public  bool running = true;
         public  TcpListener server;
         public  X509Certificate2 cert = new X509Certificate2("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\SSL Server\\server.pfx", "SecureChat");

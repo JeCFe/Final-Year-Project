@@ -99,32 +99,51 @@ namespace Forms_SSL_Client
 
         private void DecodeMessage(string message)
         {
-            if (this.InvokeRequired)
+            if (message == null)
             {
-                this.Invoke(new DecodeMessageDelegate(DecodeMessage), new object[] { message });
+                MessageBox.Show("Null message");
             }
             else
             {
-                Message M = new Message();
-
-                JavaScriptSerializer Deserializer = new JavaScriptSerializer();
-                M = Deserializer.Deserialize<Message>(message);
-                switch (M.id)
+                if (this.InvokeRequired)
                 {
-                    case "0": //HandShake
-                        HandShakeManager(M);
-                        break;
-                    case "1": //Login
-                        LoginManager(M);
-                        break;
-                    case "2"://Registration
-                        RegistrationManager(M);
-                        break;
-                    case "3": //Standard Message
-                        CommonCommunications(M);
-                        break;
-                    default:
-                        break;
+                    this.Invoke(new DecodeMessageDelegate(DecodeMessage), new object[] { message });
+                }
+                else
+                {
+                    Message M = new Message();
+
+                    //Decrypt Message 
+                    string decryptedMessage = message;
+                    try //Handhake cannot be decrypted this try catch will avoid program throwing
+                    {
+                        decryptedMessage = auth.decryptMessage(message);
+                    }
+                    catch (Exception)
+                    {
+                        //Log here decryption failed
+                    }
+
+                    JavaScriptSerializer Deserializer = new JavaScriptSerializer();
+                    M = Deserializer.Deserialize<Message>(decryptedMessage);
+                    switch (M.id)
+                    {
+                        case "0": //HandShake
+                            HandShakeManager(M);
+                            break;
+                        case "1": //Login
+                            LoginManager(M);
+                            break;
+                        case "2"://Registration
+                            RegistrationManager(M);
+                            break;
+                        case "3": //Standard Message
+                            CommonCommunications(M);
+                            break;
+                        default:
+                            break;
+
+                    }
                 }
             }
         }
@@ -160,40 +179,17 @@ namespace Forms_SSL_Client
             M.id = "3";
             M.message = SMstring;
             string Mstring = Serializer.Serialize(M);
-            writer.WriteLine(Mstring);
-            writer.Flush();
+            SendDataToServer(Mstring);
             txtMsgToSend.Text = "";
         }
 
-
-        private void LoginBegin() //Begins login steps 
+        private void SendDataToServer(string message)
         {
-            LINFO.Email = txtUserEmail.Text;
-            LINFO.stage = "1";
-            JavaScriptSerializer Serializer = new JavaScriptSerializer();
-            string LINFOmessage = Serializer.Serialize(LINFO);
-            M.id = "1";
-            M.message = LINFOmessage;
-            string message = Serializer.Serialize(M);
+            //Encrypt message using AES
+           // string encryptedMessage = auth.encryptMessage(message);
+            //string decrypted = auth.decryptMessage(encryptedMessage);
             writer.WriteLine(message);
             writer.Flush();
-
-        }
-        private void LoginManager(Message M)
-        {
-            JavaScriptSerializer Deserializer = new JavaScriptSerializer();
-            LINFO = Deserializer.Deserialize<LoginInformation>(M.message);
-            switch (LINFO.stage)
-            {
-                case "2":
-                    LogInSecondStage(LINFO);
-                    break;
-                case "3":
-                    LogInFinalStage(LINFO.confirmation);
-                    break;
-                default:
-                    break;
-            }
         }
         private string PreformPBKDF2Hash(string accountHashedPassword, byte[] salt)
         {
@@ -201,9 +197,41 @@ namespace Forms_SSL_Client
             Rfc2898DeriveBytes hash = new Rfc2898DeriveBytes(accountHashedPassword, salt, iterations);
             return Convert.ToBase64String(hash.GetBytes(128));
         }
+
+        #region Login
+        private void LoginBegin() //Begins login steps 
+        {
+            LINFO.Email = auth.encryptMessage(txtUserEmail.Text);
+            LINFO.stage = auth.encryptMessage("1");
+            string test = auth.decryptMessage(LINFO.stage);
+            JavaScriptSerializer Serializer = new JavaScriptSerializer();
+            string LINFOmessage = Serializer.Serialize(LINFO);
+            M.id = "1";
+            M.message = LINFOmessage;
+            string message = Serializer.Serialize(M);
+            SendDataToServer(message);
+        }
+
+        private void LoginManager(Message M)
+        {
+            JavaScriptSerializer Deserializer = new JavaScriptSerializer();
+            LINFO = Deserializer.Deserialize<LoginInformation>(M.message);
+            switch (auth.decryptMessage(LINFO.stage))
+            {
+                case "2":
+                    LogInSecondStage(LINFO);
+                    break;
+                case "3":
+                    LogInFinalStage(auth.decryptMessage(LINFO.confirmation));
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void LogInSecondStage(LoginInformation LINFO) //Client stage 2
         {
-            if (LINFO.confirmation == "true")
+            if (auth.decryptMessage(LINFO.confirmation) == "true")
             {
                 string plainTextPassword = txtPassword.Text;
                 string accountPasswordHash = PreformPBKDF2Hash(plainTextPassword, Convert.FromBase64String(LINFO.accountSalt));
@@ -211,14 +239,13 @@ namespace Forms_SSL_Client
                 //Hash with accountSalt
                 //Hash with sessionSalt 
                 LINFO.passwordHash = authenticationToken;
-                LINFO.stage = "2";
+                LINFO.stage = auth.encryptMessage("2");
                 JavaScriptSerializer Serializer = new JavaScriptSerializer();
                 string LINFOmessage = Serializer.Serialize(LINFO);
                 M.id = "1";
                 M.message = LINFOmessage;
                 string message = Serializer.Serialize(M);
-                writer.WriteLine(message);
-                writer.Flush();
+                SendDataToServer(message);
             }
             else
             {
@@ -238,23 +265,24 @@ namespace Forms_SSL_Client
                 MessageBox.Show("Unsuccessful");
             }
         }//Client stage 3
+        #endregion
 
+        #region Registration 
         private void RegistrationBegin() //Request salt from server
         {
-            RINFO.stage = "1";
+            RINFO.stage = auth.encryptMessage("1");
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             string RINFOmessage = serializer.Serialize(RINFO);
             M.id = "2";
             M.message = RINFOmessage;
             string message = serializer.Serialize(M);
-            writer.WriteLine(message);
-            writer.Flush();
+            SendDataToServer(message);
         }
         private void RegistrationManager(Message M)
         {
             JavaScriptSerializer Deserialiser = new JavaScriptSerializer();
             RINFO = Deserialiser.Deserialize<RegistrationInformation>(M.message);
-            switch (RINFO.stage)
+            switch (auth.decryptMessage(RINFO.stage))
             {
                 case "1": //Recieve either account salt or confirmation that email has been taken
                     RegistrationSecondStage(RINFO);
@@ -264,24 +292,24 @@ namespace Forms_SSL_Client
                     break;
             }
         }
-
         private void RegistrationSecondStage(RegistrationInformation RINFO)
         {
             Message M = new Message();
-            if (RINFO.confirmation == "true") //Can continue with registraion
+            if (auth.decryptMessage(RINFO.confirmation) == "true") //Can continue with registraion
             {
+                //Ensures all important information is encrypted
                 string hashedPassword = PreformPBKDF2Hash(txtRegPassword.Text, Convert.FromBase64String(RINFO.AccountSalt));
-                RINFO.Email = txtRegEmail.Text;
-                RINFO.Name = txtUsername.Text;
+                RINFO.Email = auth.encryptMessage(txtRegEmail.Text);
+                RINFO.Name = auth.encryptMessage(txtUsername.Text);
                 RINFO.PasswordHash = hashedPassword;
-                RINFO.stage = "2";
+                MessageBox.Show(hashedPassword);
+                RINFO.stage = auth.encryptMessage("2");
                 JavaScriptSerializer Serializer = new JavaScriptSerializer();
                 string RINFOmessage = Serializer.Serialize(RINFO);
                 M.id = "2";
                 M.message = RINFOmessage;
                 string message = Serializer.Serialize(M);
-                writer.WriteLine(message);
-                writer.Flush();
+                SendDataToServer(message);
             }
             else { MessageBox.Show("Unknown error occurred, please try again"); }
 
@@ -289,12 +317,15 @@ namespace Forms_SSL_Client
         }
         private void RegistrationFinalStage(RegistrationInformation RINFO)
         {
-            if (RINFO.confirmation == "true")
+            if (auth.decryptMessage(RINFO.confirmation) == "true")
             {
                 MessageBox.Show("Account added");
             }
             else { MessageBox.Show("Error with registring account"); }
         }
+        #endregion
+
+        #region Forms Interaction
         private void ElementVisability()
         {
             txtMessageBox.Visible = true;
@@ -329,7 +360,7 @@ namespace Forms_SSL_Client
         {
             RegistrationBegin();
         }
-
+        #endregion
 
 
     }
@@ -389,8 +420,8 @@ namespace Forms_SSL_Client
             }
             catch (Exception)
             {
-
-                throw;
+                return message;
+                //error log
             }
 
         }

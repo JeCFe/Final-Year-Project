@@ -1,0 +1,5 @@
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Client\obj\Debug\SSL Client.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Client\bin\Debug\SSL Client.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Client\bin\Debug\SSL Client.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Client\obj\Debug\SSL Client.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SSL Client\obj\Debug\SSL Client.pdb

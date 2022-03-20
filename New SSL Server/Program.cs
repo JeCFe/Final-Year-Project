@@ -206,7 +206,6 @@ namespace SSL_Server
             UpdateUserDatabase(ad);
         }
     }
-
     class Authenticator
     {
         private AuthenticationInformation Ainfo;
@@ -294,20 +293,15 @@ namespace SSL_Server
 
     }
     
-
     class Program
     {
         public IPAddress ip = IPAddress.Parse("192.168.0.23");
-
-
         public int port = 2556;
         public bool running = true;
         public TcpListener server;
         public  X509Certificate2 cert = new X509Certificate2("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\New SSL Server\\server.pfx", "SecureChat");
-
         public static List<ClientHandler> clientHandlers = new List<ClientHandler>();
         public static Authenticator auth;
-
 
         static void Main(string[] args)
         {
@@ -338,7 +332,7 @@ namespace SSL_Server
         public Program()
         {
             Console.WriteLine("Server Started");
-            server = new TcpListener(ip, port);
+            server = new TcpListener(IPAddress.Any, port);
             server.Start();
             Listen();
         }
@@ -368,7 +362,6 @@ namespace SSL_Server
             {
                 client.SendMessage(msg);
             }
-
         }
         public string GenerateAccountSalt()
         {
@@ -395,7 +388,7 @@ namespace SSL_Server
 
     }
 
-    //Class that contains a users email and hash value for comparison at a later point
+
 
 
     class ClientHandler
@@ -412,10 +405,6 @@ namespace SSL_Server
         RSA publicKey;
         //All types of messages that can be recieved
 
-
-
-
-
         AccountData ClientUser = null;
 
         public ClientHandler(TcpClient clientSocket, Program p, byte[] sSalt)
@@ -426,28 +415,10 @@ namespace SSL_Server
 
             (new Thread(new ThreadStart(SetupConn))).Start();
         }
-        //void testEncryption()
-        //{
-        //    byte[] test1 = publicKey.Encrypt(Encoding.Unicode.GetBytes("T"), RSAEncryptionPadding.Pkcs1);
-        //    byte[] test2 = privateKey.Decrypt(test1, RSAEncryptionPadding.Pkcs1);
-        //    string test = Encoding.Unicode.GetString(test2);
-        //    TesterFunction tester = new TesterFunction();
-        //    tester.message = test1;
-        //    JavaScriptSerializer Sr = new JavaScriptSerializer();
-        //    string message = Sr.Serialize(tester);
-        //    testDecryption(message);
-        //}
-        //void testDecryption(string message)
-        //{
-        //    TesterFunction tester = new TesterFunction();
-        //    JavaScriptSerializer Deserializer = new JavaScriptSerializer();
-        //    tester = Deserializer.Deserialize<TesterFunction>(message);
-        //    byte[] test2 = privateKey.Decrypt(tester.message, RSAEncryptionPadding.Pkcs1);
-        //    //string show = Encoding.Unicode.GetString(test2);
-        //}
+
         void testRSA()
         {
-             privateKey = prog.cert.GetRSAPrivateKey();
+            privateKey = prog.cert.GetRSAPrivateKey();
             publicKey = prog.cert.GetRSAPublicKey();
         }
 
@@ -485,6 +456,10 @@ namespace SSL_Server
 
             M.message = SMstring;
             M.id = "3";
+            if (M == null)
+            {
+                Console.WriteLine("Error");
+            }
             string messageToSend = Serializer.Serialize(M);
             Program.broadcast(messageToSend);
         }
@@ -497,9 +472,18 @@ namespace SSL_Server
                 {
                     Message M = new Message();
                     string receivedMessage = reader.ReadLine();
+                    string decryptedMessage = receivedMessage;
+                    try
+                    {
+                        //decryptedMessage = decryptMessage(receivedMessage);
+                    }
+                    catch (Exception)
+                    {
+                        //error log
+                    }
 
                     JavaScriptSerializer Deserializer = new JavaScriptSerializer();
-                    M = Deserializer.Deserialize<Message>(receivedMessage);
+                    M = Deserializer.Deserialize<Message>(decryptedMessage);
                     switch (M.id)
                     {
                         case "0": //HandShake
@@ -517,9 +501,6 @@ namespace SSL_Server
                         default:
                             break;
                     }
-                    //Console.WriteLine(receivedMessage);
-
-                    //Program.broadcast(receivedMessage);
                 }
                 catch (Exception)
                 {
@@ -545,7 +526,12 @@ namespace SSL_Server
             string HSMstring = Serializer.Serialize(HSM);
             M.message = HSMstring;
             string Mmessage = Serializer.Serialize(M);
-            SendMessage(Mmessage);
+            if (Mmessage == "")
+            {
+                Console.WriteLine("Error");
+            }
+            writer.WriteLine(Mmessage);
+            writer.Flush();
 
         }
         private void HandshakeManager(Message M)
@@ -569,7 +555,7 @@ namespace SSL_Server
             RegistrationInformation RINFO = new RegistrationInformation();
             JavaScriptSerializer Deserializer = new JavaScriptSerializer();
             RINFO = Deserializer.Deserialize<RegistrationInformation>(M.message);
-            switch (RINFO.stage)
+            switch (decryptMessage(RINFO.stage))
             {
                 case "1":
                     RegistraionStageOne(RINFO); //Checking to make sure email hasnt been taken
@@ -585,9 +571,11 @@ namespace SSL_Server
         {
             Message M = new Message();
             JavaScriptSerializer Serializer = new JavaScriptSerializer();
-            RINFO.stage = "1";
+
+            RINFO.stage = encryptMessage("1");
             RINFO.AccountSalt = prog.GenerateAccountSalt();
-            RINFO.confirmation = "true";
+            RINFO.confirmation = encryptMessage("true");
+
             string RINFOmessage = Serializer.Serialize(RINFO);
             M.id = "2";
             M.message = RINFOmessage;
@@ -596,23 +584,36 @@ namespace SSL_Server
         }
         private void RegistrationFinalStage(RegistrationInformation RINFO)
         {
-            AccountData ad = new AccountData(RINFO);
+            RegistrationInformation TempRI = new RegistrationInformation();
+            TempRI.AccountSalt = RINFO.AccountSalt;
+            TempRI.Email = decryptMessage(RINFO.Email);
+            TempRI.PasswordHash = RINFO.PasswordHash;
+            TempRI.Name = decryptMessage(RINFO.Name);
+            AccountData ad = new AccountData(TempRI);
             if (prog.AccountLookup(ad.getEmail()) == null) //If no match for email
             {
-                RINFO.confirmation = "true";
+                RINFO.confirmation = encryptMessage("true");
                 prog.RegNewAccount(ad);
             }
             else
             {
-                RINFO.confirmation = "false";
+                RINFO.confirmation = encryptMessage("false");
             }
+            Message M = new Message();
+            JavaScriptSerializer Serializer = new JavaScriptSerializer();
+            RINFO.stage = encryptMessage("2");
+            string RINFOmessage = Serializer.Serialize(RINFO);
+            M.id = "2";
+            M.message = RINFOmessage;
+            string message = Serializer.Serialize(M);
+            SendMessage(message);
         }
         private void LoginManager(Message M)
         {
             LoginInformation LINFO = new LoginInformation();
             JavaScriptSerializer Deserializer = new JavaScriptSerializer();
             LINFO = Deserializer.Deserialize<LoginInformation>(M.message);
-            switch (LINFO.stage)
+            switch (decryptMessage(LINFO.stage))
             {
                 case "1": //Recieved lookup email
                     LookupEmail(LINFO);
@@ -637,20 +638,20 @@ namespace SSL_Server
                 {
                     if (prog.LogUserIn(ClientUser)) //If no client already logged in under that name
                     {
-                        LINFO.confirmation = "true"; //will tell client that they have succcessfully logged in
+                        LINFO.confirmation = encryptMessage("true"); //will tell client that they have succcessfully logged in
                     }
                     else
                     {
-                        LINFO.confirmation = "false"; //will tell client they havent logged in
+                        LINFO.confirmation = encryptMessage("false"); //will tell client they havent logged in
                         ClientUser = null; //deletes old clientUser data
                     }
                 }
                 else
                 {
-                    LINFO.confirmation = "false"; //Incorrect password
+                    LINFO.confirmation = encryptMessage("false"); //Incorrect password
                     ClientUser = null;
                 }
-                LINFO.stage = "3";
+                LINFO.stage = encryptMessage("3");
 
                 JavaScriptSerializer Serializer = new JavaScriptSerializer();
                 string LINFOmessage = Serializer.Serialize(LINFO);
@@ -664,29 +665,34 @@ namespace SSL_Server
         private void LookupEmail(LoginInformation LINFO)
         {
             Message M = new Message();
-            ClientUser = prog.AccountLookup(LINFO.Email); //returns null if no account found
+            ClientUser = prog.AccountLookup(decryptMessage(LINFO.Email)); //returns null if no account found
             if (ClientUser != null) //Account found
             {
 
                 LINFO.accountSalt = ClientUser.getSalt();
                 LINFO.sessionSalt = Convert.ToBase64String(sessionSalt);
-                LINFO.confirmation = "true";
+                LINFO.confirmation = encryptMessage("true");
             }
             else //Account not found
             {
-                LINFO.confirmation = "False";
+                LINFO.confirmation = encryptMessage("False");
                 
             }
-            LINFO.stage = "2";
+            LINFO.stage = encryptMessage("2");
             JavaScriptSerializer Serializer = new JavaScriptSerializer();
             string LINFOmessage = Serializer.Serialize(LINFO);
             M.id = "1";
             M.message = LINFOmessage;
             string message = Serializer.Serialize(M);
+            if (message == "")
+            {
+                Console.WriteLine("Error");
+            }
             SendMessage(message);
         }
         public void SendMessage(string message)
         {
+            //string encryptedMessage = encryptMessage(message);
             writer.WriteLine(message);
             writer.Flush();
         }
@@ -712,8 +718,7 @@ namespace SSL_Server
                 return encryptedString;
             }
             catch (Exception)
-            {
-
+            { 
                 throw;
             }
 
@@ -740,7 +745,7 @@ namespace SSL_Server
             catch (Exception)
             {
 
-                throw;
+                return message;
             }
 
         }
