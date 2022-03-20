@@ -5,8 +5,6 @@ using System.Linq;
 using System.Net.Security;
 using System.Net.Sockets;
 using System.Security.Cryptography;
-
-
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
@@ -15,15 +13,12 @@ using System.Windows.Forms;
 
 namespace Forms_SSL_Client
 {
-
+   
 
     public partial class Form1 : Form
     {
-
-        Authenticator auth = new Authenticator();
-        //public string ServerIP { get { return "192.168.0.23"; } }
-        public string ServerIP { get { return "82.28.214.91"; } }
-        public int ServerPort { get { return 2556; } }
+        public string ServerIP { get { return "192.168.0.23"; } }
+        public int ServerPort { get { return 2000; } }
 
         TcpClient client;
         NetworkStream netStream;
@@ -63,9 +58,7 @@ namespace Forms_SSL_Client
                     listeningThread.Start();
                     connectionEstablished = true;
                 }
-                catch (Exception) {
-                    MessageBox.Show("FUCK");
-                }
+                catch (Exception) { }
 
             }
         }
@@ -111,6 +104,7 @@ namespace Forms_SSL_Client
                 }
                 else
                 {
+<<<<<<< HEAD
                     Message M = new Message();
 
                     //Decrypt Message 
@@ -144,6 +138,21 @@ namespace Forms_SSL_Client
                             break;
 
                     }
+=======
+                    case "0": //HandShake
+                        break;
+                    case "1": //Login
+                        LoginManager(M);
+                        break;
+                    case "2"://Registration
+                        RegistrationManager(M);
+                        break;
+                    case "3": //Standard Message
+                        CommonCommunications(M);
+                        break;
+                    default:
+                        break;
+>>>>>>> parent of 895f512 (progress baby progress)
                 }
             }
         }
@@ -151,25 +160,7 @@ namespace Forms_SSL_Client
         {
             return true; // Allow untrusted certificates.
         }
-        private void HandShakeManager(Message M)
-        {
-            JavaScriptSerializer Deserializer = new JavaScriptSerializer();
-            JavaScriptSerializer Serializer = new JavaScriptSerializer();
-            HSM = Deserializer.Deserialize<HandShakeMessage>(M.message);
-            if (HSM.stage == "1")
-            {
-                HSM.EncryptedAESIV = auth.getEncryptedAesIV(HSM.RSAPublicKey);
-                HSM.EncryptedAESKey = auth.getEncryptedAesKey(HSM.RSAPublicKey);
-                HSM.test = auth.encryptMessage("Test");
-                HSM.stage = "1";
-                string HSMmessage = Serializer.Serialize(HSM);
-                M.id = "0";
-                M.message = HSMmessage;
-                string mMessage = Serializer.Serialize(M);
-                writer.WriteLine(mMessage);
-                writer.Flush();
-            }
-        }
+
         private void SendMessage() //Sends basic message
         {
             JavaScriptSerializer Serializer = new JavaScriptSerializer();
@@ -364,6 +355,7 @@ namespace Forms_SSL_Client
 
 
     }
+<<<<<<< HEAD
     class Authenticator
     {
         Aes aesKey;
@@ -445,6 +437,8 @@ namespace Forms_SSL_Client
             return byteEncryptedAES;
         }
     }
+=======
+>>>>>>> parent of 895f512 (progress baby progress)
 
 
     class Message //Default message recieved 
@@ -454,13 +448,11 @@ namespace Forms_SSL_Client
     }
     class HandShakeMessage //ID CODE 0
     {
-        public string stage;
-        public string test;
         public string RSAPublicKey;
-        public byte[] EncryptedAESKey;
-        public byte[] EncryptedAESIV;
+        public string EncryptedAESKey;
+        public string EncryptedAESIV;
         public bool Confirmation;
-
+        public string SessionSalt;
     }
     class LoginInformation //ID CODE 1
     {

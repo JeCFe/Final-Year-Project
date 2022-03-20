@@ -18,7 +18,6 @@ using MongoDB.Driver;
 
 namespace SSL_Server
 {
-
     class Message //Default message recieved 
     {
         public string id;
@@ -26,12 +25,11 @@ namespace SSL_Server
     }
     class HandShakeMessage //ID CODE 0
     {
-        public string stage;
-        public string test;
         public string RSAPublicKey;
-        public byte[] EncryptedAESKey;
-        public byte[] EncryptedAESIV;
+        public string EncryptedAESKey;
+        public string EncryptedAESIV;
         public bool Confirmation;
+        public string SessionSalt;
     }
     class LoginInformation //ID CODE 1
     {
@@ -209,46 +207,10 @@ namespace SSL_Server
     class Authenticator
     {
         private AuthenticationInformation Ainfo;
-        private RSAParameters pubKey;
-        private RSAParameters privKey;
-        private string stringPubKey;
-
+        int a = 0;
         public void Initalise()
         {
             Ainfo = new AuthenticationInformation();
-            exportKeys();
-        }
-        private void exportKeys()
-        {
-            var csp = new RSACryptoServiceProvider(2048);
-            privKey = csp.ExportParameters(true);
-            pubKey = csp.ExportParameters(false);
-            stringPubKey = csp.ToXmlString(false);
-        }
-        public string getPublicRSA()
-        {
-            return stringPubKey;
-        }
-        public byte[] decryptAESMessage(byte[] message)
-        {
-            try
-            {
-
-                var privCSP = new RSACryptoServiceProvider();
-                var pubCSP = new RSACryptoServiceProvider();
-                pubCSP.FromXmlString(stringPubKey);
-                privCSP.ImportParameters(privKey);
-                byte[] decryptedBytes = privCSP.Decrypt(message, RSAEncryptionPadding.Pkcs1);
-
-                return decryptedBytes;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-
         }
         public bool validateAdmin()
         {
@@ -296,6 +258,7 @@ namespace SSL_Server
     class Program
     {
         public IPAddress ip = IPAddress.Parse("192.168.0.23");
+<<<<<<< HEAD
         public int port = 2556;
         public bool running = true;
         public TcpListener server;
@@ -303,16 +266,20 @@ namespace SSL_Server
         public static List<ClientHandler> clientHandlers = new List<ClientHandler>();
         public static Authenticator auth;
 
+=======
+        public int port = 2000;
+        public bool running = true;
+        public TcpListener server;
+        public X509Certificate2 cert = new X509Certificate2("C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\SSL Server\\server.pfx", "SecureChat");
+        public static List<ClientHandler> clientHandlers = new List<ClientHandler>();
+        public static Authenticator auth;
+>>>>>>> parent of 895f512 (progress baby progress)
         static void Main(string[] args)
         {
-
             InitaliseRSA();
             auth = new Authenticator();
             auth.Initalise();
             auth.validateAdmin();
-
-
-
             Program p = new Program();
 
         }
@@ -375,16 +342,6 @@ namespace SSL_Server
             auth.RegNewAccount(ad);
 
         }
-        public byte[] decryptAESKey(byte[] message)
-        {
-            //needs to lock
-            return auth.decryptAESMessage(message);
-        }
-        public string getPublicKey()
-        {
-            return auth.getPublicRSA();
-
-        }
 
     }
 
@@ -400,11 +357,15 @@ namespace SSL_Server
         private StreamWriter writer;
         private StreamReader reader;
         private byte[] sessionSalt;
-        Aes aesKey = Aes.Create();
-        RSA privateKey;
-        RSA publicKey;
         //All types of messages that can be recieved
 
+<<<<<<< HEAD
+=======
+        HandShakeMessage HSM = new HandShakeMessage();
+
+
+
+>>>>>>> parent of 895f512 (progress baby progress)
         AccountData ClientUser = null;
 
         public ClientHandler(TcpClient clientSocket, Program p, byte[] sSalt)
@@ -412,15 +373,17 @@ namespace SSL_Server
             prog = p;
             client = clientSocket;
             sessionSalt = sSalt;
-
             (new Thread(new ThreadStart(SetupConn))).Start();
         }
+<<<<<<< HEAD
 
         void testRSA()
         {
             privateKey = prog.cert.GetRSAPrivateKey();
             publicKey = prog.cert.GetRSAPublicKey();
         }
+=======
+>>>>>>> parent of 895f512 (progress baby progress)
 
         void SetupConn()
         {
@@ -433,10 +396,9 @@ namespace SSL_Server
                 Console.WriteLine("Connection Authenticated");
                 reader = new StreamReader(sslStream, Encoding.Unicode);
                 writer = new StreamWriter(sslStream, Encoding.Unicode);
-                testRSA();
+
                 Thread messageThread = new Thread(ReadMessage);
                 messageThread.Start();
-                InitaliseHandshake();
 
             }
             catch { }
@@ -487,7 +449,6 @@ namespace SSL_Server
                     switch (M.id)
                     {
                         case "0": //HandShake
-                            HandshakeManager(M);
                             break;
                         case "1": //Login
                              LoginManager(M);
@@ -513,6 +474,7 @@ namespace SSL_Server
              }
 
         }
+<<<<<<< HEAD
         private void InitaliseHandshake()
         {
             HandShakeMessage HSM = new HandShakeMessage();
@@ -550,6 +512,8 @@ namespace SSL_Server
                 }
             }
         }
+=======
+>>>>>>> parent of 895f512 (progress baby progress)
         private void RegistrationManager(Message M)
         {
             RegistrationInformation RINFO = new RegistrationInformation();
@@ -696,6 +660,7 @@ namespace SSL_Server
             writer.WriteLine(message);
             writer.Flush();
         }
+<<<<<<< HEAD
         public string encryptMessage(string message)
         {
             try
@@ -749,5 +714,7 @@ namespace SSL_Server
             }
 
         }
+=======
+>>>>>>> parent of 895f512 (progress baby progress)
     }
 }

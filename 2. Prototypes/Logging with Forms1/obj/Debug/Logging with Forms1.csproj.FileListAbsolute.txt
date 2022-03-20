@@ -1,9 +1,0 @@
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\Logging with Forms1\bin\Debug\Logging with Forms1.exe.config
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\Logging with Forms1\bin\Debug\Logging with Forms1.exe
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\Logging with Forms1\bin\Debug\Logging with Forms1.pdb
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\Logging with Forms1\obj\Debug\Logging with Forms1.csprojAssemblyReference.cache
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\Logging with Forms1\obj\Debug\Logging_with_Forms1.Form1.resources
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\Logging with Forms1\obj\Debug\Logging_with_Forms1.Properties.Resources.resources
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\Logging with Forms1\obj\Debug\Logging with Forms1.csproj.GenerateResource.cache
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\Logging with Forms1\obj\Debug\Logging with Forms1.exe
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\Logging with Forms1\obj\Debug\Logging with Forms1.pdb
