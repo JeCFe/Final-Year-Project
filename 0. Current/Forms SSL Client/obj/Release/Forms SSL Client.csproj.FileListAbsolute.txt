@@ -1,0 +1,9 @@
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\bin\Release\Forms SSL Client.exe.config
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\bin\Release\Forms SSL Client.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\bin\Release\Forms SSL Client.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\obj\Release\Forms SSL Client.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\obj\Release\Forms_SSL_Client.Form1.resources
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\obj\Release\Forms_SSL_Client.Properties.Resources.resources
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\obj\Release\Forms SSL Client.csproj.GenerateResource.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\obj\Release\Forms SSL Client.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\Forms SSL Client\obj\Release\Forms SSL Client.pdb
