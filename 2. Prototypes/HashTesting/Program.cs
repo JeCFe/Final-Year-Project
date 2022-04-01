@@ -25,20 +25,27 @@ namespace HashTesting
 
         static void Main(string[] args)
         {
-            byte[] accountSalt = GenSalt();
-            byte[] sessionSalt = GenSalt();
             Console.WriteLine("Enter password");
             string password = Console.ReadLine();
-            string persistantFirstHash = Hasher(password, accountSalt);
-            string persistantFinalHash = Hasher(persistantFirstHash, sessionSalt);
-            Console.WriteLine("Password hash: " + persistantFinalHash);
-            Console.WriteLine("Enter password");
-             string loginPassword =  Console.ReadLine();
-            string loginFirstHash = Hasher(loginPassword, accountSalt);
-            string loginFinalHash = Hasher(loginFirstHash, sessionSalt);
-            Console.WriteLine("Test hash: " + loginFinalHash);
-            if (persistantFinalHash == loginFinalHash){ Console.WriteLine("Match"); }
-            else{ Console.WriteLine("Non Match"); }
+            byte[] accountSalt = GenSalt();
+            byte[] sessionSalt = GenSalt();
+            string firstHash = Hasher(password, accountSalt);
+            string finalHash = Hasher(firstHash, sessionSalt);
+            Console.WriteLine("Password hash: " + finalHash);
+
+             string test =  Console.ReadLine();
+            string fHash = Hasher(test, accountSalt);
+            string fiHash = Hasher(fHash, sessionSalt);
+            Console.WriteLine("Test hash: " + fiHash);
+
+            if (finalHash == fiHash)
+            {
+                Console.WriteLine("Match");
+            }
+            else
+            {
+                Console.WriteLine("Non Match");
+            }
             Console.ReadKey();
         }
     }
