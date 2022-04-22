@@ -13,6 +13,7 @@ namespace New_SSL_Server
 {
     class ClientHandler
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger("ClientHandler.cs");
         Server server;
         public TcpClient client;
         public NetworkStream netStream;
@@ -21,8 +22,7 @@ namespace New_SSL_Server
         private StreamReader reader;
         private byte[] sessionSalt;
         Aes aesKey = Aes.Create();
-        RSA privateKey;
-        RSA publicKey;
+
         //All types of messages that can be recieved
         AccountData ClientUser = null;
         public ClientHandler(TcpClient clientSocket, Server s, byte[] sSalt)
@@ -32,11 +32,6 @@ namespace New_SSL_Server
             sessionSalt = sSalt;
 
             (new Thread(new ThreadStart(SetupConn))).Start();
-        }
-        void testRSA()
-        {
-            privateKey = server.cert.GetRSAPrivateKey();
-            publicKey = server.cert.GetRSAPublicKey();
         }
         void SetupConn()
         {
@@ -49,13 +44,12 @@ namespace New_SSL_Server
                 Console.WriteLine("Connection Authenticated");
                 reader = new StreamReader(sslStream, Encoding.Unicode);
                 writer = new StreamWriter(sslStream, Encoding.Unicode);
-                testRSA();
                 Thread messageThread = new Thread(ReadMessage);
                 messageThread.Start();
                 InitaliseHandshake();
 
             }
-            catch { }
+            catch (Exception e){ log.Error(e.ToString()); }
         }
         public void SendBasicMessage(string message)
         {
@@ -80,7 +74,6 @@ namespace New_SSL_Server
 
             JavaScriptSerializer Deserializer = new JavaScriptSerializer();
             SM = Deserializer.Deserialize<StandardMessage>(M.message);
-            //string amendedMessage = ClientUser.getName() + ": " + decryptMessage(SM.message);
             string amendedMessage = ClientUser.getName() + ": " + SM.message;
             Server.broadcast(amendedMessage);
 
@@ -117,12 +110,13 @@ namespace New_SSL_Server
                             break;
                     }
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
+                    log.Info("Client disconnected");
                     clientConnected = false; //Ends the infinte loop
+                    Logout();
                     server.removeClientFromClientList(this); //Ensures removal of client from client list
                     client.Close(); //Closes client connection
-                    Console.WriteLine("Connection closed");
                 }
             }
         }
@@ -142,6 +136,7 @@ namespace New_SSL_Server
             if (Mmessage == "")
             {
                 Console.WriteLine("Error");
+                log.Error(client.ToString() + " handshake issue");
             }
             writer.WriteLine(Mmessage);
             writer.Flush();
@@ -157,12 +152,6 @@ namespace New_SSL_Server
                 aesKey.Key = server.decryptAESKey(HSM.EncryptedAESKey);
                 aesKey.IV = server.decryptAESKey(HSM.EncryptedAESIV);
                 aesKey.Padding = PaddingMode.PKCS7;
-
-                if (decryptMessage(HSM.test) == "Test")
-                {
-                    Console.WriteLine("Success");
-                }
-
             }
         }
         private void RegistrationManager(Message M)
@@ -231,6 +220,9 @@ namespace New_SSL_Server
                 case "2":
                     HashComparision(LINFO);
                     break;
+                case "5":
+                    Logout();
+                    break;
                 default:
                     break;
             }
@@ -295,11 +287,17 @@ namespace New_SSL_Server
             M.id = "1";
             M.message = LINFOmessage;
             string message = Serializer.Serialize(M);
-            if (message == "")
-            {
-                Console.WriteLine("Error");
-            }
             SendMessage(message);
+        }
+        private void Logout()
+        {
+            if (ClientUser != null)
+            {
+                if (ClientUser.getLoggedIn() == true)
+                {
+                    server.LogClientOut(ClientUser);
+                }
+            }
         }
         public void SendMessage(string message)
         {
@@ -330,8 +328,9 @@ namespace New_SSL_Server
                 }
                 return cipherText;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                log.Error(e.ToString());
                 throw;
             }
         }
@@ -357,8 +356,9 @@ namespace New_SSL_Server
                 }
                 return plainText;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                log.Error(e.ToString());
                 return message;
             }
         }

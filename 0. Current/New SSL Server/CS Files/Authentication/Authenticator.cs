@@ -9,6 +9,7 @@ namespace New_SSL_Server
 {
     class Authenticator
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger("Authenticator.cs");
         private AuthenticationInformation Ainfo;
         private RSAParameters pubKey;
         private RSAParameters privKey;
@@ -20,6 +21,14 @@ namespace New_SSL_Server
             exportKeys();
         }
         public AdminDetails getAdminDetails() { return adminDetails; }
+        public void DeleteUser()
+        {
+            Ainfo.DeleteUser();
+        }
+        public void DeleteAdmin()
+        {
+            Ainfo.DeleteAdmin();
+        }
         private void exportKeys()
         {
             var csp = new RSACryptoServiceProvider(2048);
@@ -44,8 +53,9 @@ namespace New_SSL_Server
 
                 return decryptedBytes;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                log.Error(e.ToString());
                 throw;
             }
         }
@@ -63,10 +73,11 @@ namespace New_SSL_Server
                 {
                     AuthToken = PreformPBKDF2Hash(hashedPassword, GenerateSalt());
                     adminDetails.setAdminDetails(aLog.getAdminName(), AuthToken);
+                    return adminDetails;
                 }
             }
-
-            return adminDetails;
+            log.Info("Invalid admin log in attempt");
+            return null;
         }
         public string PreformPBKDF2Hash(string accountHashedPassword, byte[] salt)
         {
@@ -77,7 +88,6 @@ namespace New_SSL_Server
         }
         public AccountData UserLookupRequest(string email)
         {
-            //This will need to be mutex locked
             AccountData ad = Ainfo.ClientLookupRequest(email);
             return ad;
         }
@@ -104,6 +114,10 @@ namespace New_SSL_Server
             aLog.setAdminSalt(Convert.ToBase64String(GenerateSalt()));
             aLog.setHashedPassword(PreformPBKDF2Hash(ARD.password, Convert.FromBase64String(aLog.getAdminSalt())));
             return Ainfo.RegAdminAccount(aLog);
+        }
+        public void LogClientOut(AccountData Client)
+        {
+            Ainfo.LogClientOut(Client);
         }
     }
 }

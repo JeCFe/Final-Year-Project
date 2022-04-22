@@ -7,18 +7,19 @@ using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
+
 namespace Forms_SSL_Client
 {
-   
-
     public partial class Form1 : Form
     {
-        public string ServerIP { get { return "192.168.0.23"; } }
-        public int ServerPort { get { return 2000; } }
+        Authenticator auth = new Authenticator();
+        public string ServerIP { get { return "81.101.122.94"; } }
+        public int ServerPort { get { return 2556; } }
 
         TcpClient client;
         NetworkStream netStream;
@@ -33,6 +34,7 @@ namespace Forms_SSL_Client
         LoginInformation LINFO = new LoginInformation();
         RegistrationInformation RINFO = new RegistrationInformation();
         StandardMessage SM = new StandardMessage();
+        delegate void DecodeMessageDelegate(string message);
 
         public Form1()
         {
@@ -58,11 +60,11 @@ namespace Forms_SSL_Client
                     listeningThread.Start();
                     connectionEstablished = true;
                 }
-                catch (Exception) { }
-
+                catch (Exception e) {
+                    MessageBox.Show(e.ToString());
+                }
             }
         }
-        delegate void DecodeMessageDelegate(string message);
         private void listenForMessages()
         {
             bool connected = true;
@@ -82,19 +84,19 @@ namespace Forms_SSL_Client
 
             }
         }
-
         private void CommonCommunications(Message M) //Handles Basic messages
         {
             JavaScriptSerializer Deserializer = new JavaScriptSerializer();
             SM = Deserializer.Deserialize<StandardMessage>(M.message);
-            txtMessageBox.AppendText(SM.message + Environment.NewLine);
+            txtMessageBox.AppendText(auth.decryptMessage(SM.message) + Environment.NewLine);
         }
-
         private void DecodeMessage(string message)
         {
             if (message == null)
             {
-                MessageBox.Show("Null message");
+                MessageBox.Show("Null message"); //Potential DDOS Close client 
+                //Send message to server to log out 
+                Application.Exit();
             }
             else
             {
@@ -104,20 +106,11 @@ namespace Forms_SSL_Client
                 }
                 else
                 {
-<<<<<<< HEAD
-                    Message M = new Message();
-
-                    //Decrypt Message 
                     string decryptedMessage = message;
-                    try //Handhake cannot be decrypted this try catch will avoid program throwing
-                    {
-                        decryptedMessage = auth.decryptMessage(message);
-                    }
-                    catch (Exception)
-                    {
-                        //Log here decryption failed
-                    }
 
+                    decryptedMessage = auth.decryptMessage(message);
+
+                    Message M = new Message();
                     JavaScriptSerializer Deserializer = new JavaScriptSerializer();
                     M = Deserializer.Deserialize<Message>(decryptedMessage);
                     switch (M.id)
@@ -138,21 +131,6 @@ namespace Forms_SSL_Client
                             break;
 
                     }
-=======
-                    case "0": //HandShake
-                        break;
-                    case "1": //Login
-                        LoginManager(M);
-                        break;
-                    case "2"://Registration
-                        RegistrationManager(M);
-                        break;
-                    case "3": //Standard Message
-                        CommonCommunications(M);
-                        break;
-                    default:
-                        break;
->>>>>>> parent of 895f512 (progress baby progress)
                 }
             }
         }
@@ -160,11 +138,30 @@ namespace Forms_SSL_Client
         {
             return true; // Allow untrusted certificates.
         }
-
+        private void HandShakeManager(Message M)
+        {
+            JavaScriptSerializer Deserializer = new JavaScriptSerializer();
+            JavaScriptSerializer Serializer = new JavaScriptSerializer();
+            HSM = Deserializer.Deserialize<HandShakeMessage>(M.message);
+            if (HSM.stage == "1")
+            {
+                HSM.EncryptedAESIV = auth.getEncryptedAesIV(HSM.RSAPublicKey);
+                HSM.EncryptedAESKey = auth.getEncryptedAesKey(HSM.RSAPublicKey);
+                HSM.test = auth.encryptMessage("Test");
+                HSM.stage = "1";
+                string HSMmessage = Serializer.Serialize(HSM);
+                M.id = "0";
+                M.message = HSMmessage;
+                string mMessage = Serializer.Serialize(M);
+                writer.WriteLine(mMessage);
+                writer.Flush();
+            }
+        }
         private void SendMessage() //Sends basic message
         {
             JavaScriptSerializer Serializer = new JavaScriptSerializer();
             string msg = txtMsgToSend.Text;
+            // SM.message = auth.encryptMessage(msg);
             SM.message = msg;
             string SMstring = Serializer.Serialize(SM);
             M.id = "3";
@@ -173,13 +170,10 @@ namespace Forms_SSL_Client
             SendDataToServer(Mstring);
             txtMsgToSend.Text = "";
         }
-
         private void SendDataToServer(string message)
         {
-            //Encrypt message using AES
-           // string encryptedMessage = auth.encryptMessage(message);
-            //string decrypted = auth.decryptMessage(encryptedMessage);
-            writer.WriteLine(message);
+            writer.WriteLine(auth.encryptMessage(message));
+            //writer.WriteLine(message);
             writer.Flush();
         }
         private string PreformPBKDF2Hash(string accountHashedPassword, byte[] salt)
@@ -189,12 +183,11 @@ namespace Forms_SSL_Client
             return Convert.ToBase64String(hash.GetBytes(128));
         }
 
-        #region Login
+        #region Login and Logout
         private void LoginBegin() //Begins login steps 
         {
-            LINFO.Email = auth.encryptMessage(txtUserEmail.Text);
-            LINFO.stage = auth.encryptMessage("1");
-            string test = auth.decryptMessage(LINFO.stage);
+            LINFO.Email = txtUserEmail.Text;
+            LINFO.stage = "1";
             JavaScriptSerializer Serializer = new JavaScriptSerializer();
             string LINFOmessage = Serializer.Serialize(LINFO);
             M.id = "1";
@@ -202,27 +195,25 @@ namespace Forms_SSL_Client
             string message = Serializer.Serialize(M);
             SendDataToServer(message);
         }
-
         private void LoginManager(Message M)
         {
             JavaScriptSerializer Deserializer = new JavaScriptSerializer();
             LINFO = Deserializer.Deserialize<LoginInformation>(M.message);
-            switch (auth.decryptMessage(LINFO.stage))
+            switch (LINFO.stage)
             {
                 case "2":
                     LogInSecondStage(LINFO);
                     break;
                 case "3":
-                    LogInFinalStage(auth.decryptMessage(LINFO.confirmation));
+                    LogInFinalStage(LINFO);
                     break;
                 default:
                     break;
             }
         }
-
         private void LogInSecondStage(LoginInformation LINFO) //Client stage 2
         {
-            if (auth.decryptMessage(LINFO.confirmation) == "true")
+            if (LINFO.confirmation == "true")
             {
                 string plainTextPassword = txtPassword.Text;
                 string accountPasswordHash = PreformPBKDF2Hash(plainTextPassword, Convert.FromBase64String(LINFO.accountSalt));
@@ -230,7 +221,7 @@ namespace Forms_SSL_Client
                 //Hash with accountSalt
                 //Hash with sessionSalt 
                 LINFO.passwordHash = authenticationToken;
-                LINFO.stage = auth.encryptMessage("2");
+                LINFO.stage = "2";
                 JavaScriptSerializer Serializer = new JavaScriptSerializer();
                 string LINFOmessage = Serializer.Serialize(LINFO);
                 M.id = "1";
@@ -241,27 +232,40 @@ namespace Forms_SSL_Client
             else
             {
                 MessageBox.Show("NO FOUND EMAIL");
+                LoginError.SetError(this.txtUserEmail, "No email found");
             }
 
         }
-        private void LogInFinalStage(string confirmation)
+        private void LogInFinalStage(LoginInformation LINFO)
         {
-            if (confirmation == "true")
+            if (LINFO.confirmation == "true")
             {
-                MessageBox.Show("Successfully Logged in");
-                ElementVisability();
+                ElementVisability(true);
+                Form1.ActiveForm.Text = "You are logged in as: " + LINFO.name;
             }
             else
             {
                 MessageBox.Show("Unsuccessful");
             }
         }//Client stage 3
+        private void Logout()
+        {
+            ElementVisability(false);
+            LoginInformation logout = new LoginInformation();
+            Message M = new Message();
+            logout.stage = "5";
+            M.id = "1";
+            JavaScriptSerializer Serializer = new JavaScriptSerializer();
+            M.message = Serializer.Serialize(logout);
+            string MainMessage = Serializer.Serialize(M);
+            SendDataToServer(MainMessage);
+        }
         #endregion
 
         #region Registration 
         private void RegistrationBegin() //Request salt from server
         {
-            RINFO.stage = auth.encryptMessage("1");
+            RINFO.stage = "1";
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             string RINFOmessage = serializer.Serialize(RINFO);
             M.id = "2";
@@ -273,7 +277,7 @@ namespace Forms_SSL_Client
         {
             JavaScriptSerializer Deserialiser = new JavaScriptSerializer();
             RINFO = Deserialiser.Deserialize<RegistrationInformation>(M.message);
-            switch (auth.decryptMessage(RINFO.stage))
+            switch (RINFO.stage)
             {
                 case "1": //Recieve either account salt or confirmation that email has been taken
                     RegistrationSecondStage(RINFO);
@@ -286,15 +290,14 @@ namespace Forms_SSL_Client
         private void RegistrationSecondStage(RegistrationInformation RINFO)
         {
             Message M = new Message();
-            if (auth.decryptMessage(RINFO.confirmation) == "true") //Can continue with registraion
+            if (RINFO.confirmation == "true") //Can continue with registraion
             {
                 //Ensures all important information is encrypted
                 string hashedPassword = PreformPBKDF2Hash(txtRegPassword.Text, Convert.FromBase64String(RINFO.AccountSalt));
-                RINFO.Email = auth.encryptMessage(txtRegEmail.Text);
-                RINFO.Name = auth.encryptMessage(txtUsername.Text);
+                RINFO.Email = txtRegEmail.Text;
+                RINFO.Name = txtUsername.Text;
                 RINFO.PasswordHash = hashedPassword;
-                MessageBox.Show(hashedPassword);
-                RINFO.stage = auth.encryptMessage("2");
+                RINFO.stage = "2";
                 JavaScriptSerializer Serializer = new JavaScriptSerializer();
                 string RINFOmessage = Serializer.Serialize(RINFO);
                 M.id = "2";
@@ -308,7 +311,7 @@ namespace Forms_SSL_Client
         }
         private void RegistrationFinalStage(RegistrationInformation RINFO)
         {
-            if (auth.decryptMessage(RINFO.confirmation) == "true")
+            if (RINFO.confirmation == "true")
             {
                 MessageBox.Show("Account added");
             }
@@ -317,163 +320,86 @@ namespace Forms_SSL_Client
         #endregion
 
         #region Forms Interaction
-        private void ElementVisability()
+        private void ElementVisability(bool showMain)
         {
-            txtMessageBox.Visible = true;
-            txtMsgToSend.Visible = true;
-            btnSend.Visible = true;
-
-            gBXLogin.Visible = false;
-            gBXRegistraion.Visible = false;
             Form1 form1 = this;
-            form1.Height = 527;
-            form1.Width = 395;
+            if (showMain)
+            {
+                txtMessageBox.Visible = true;
+                txtMsgToSend.Visible = true;
+                btnSend.Visible = true;
+                btnLogout.Visible = true;
 
+                gBXLogin.Visible = false;
+                gBXRegistraion.Visible = false;
+
+                form1.Height = 527;
+                form1.Width = 395;
+            }
+            else
+            {
+                txtMessageBox.Visible = false;
+                txtMsgToSend.Visible = false;
+                btnSend.Visible = false;
+                btnLogout.Visible = false;
+
+                gBXLogin.Visible = true;
+                gBXRegistraion.Visible = true;
+
+                form1.Height = 209;
+                form1.Width = 512;
+            }
+            txtMessageBox.Clear();
+            txtMsgToSend.Clear();
         }
         private void btnSend_Click(object sender, EventArgs e)
         {
+            //input validation
             SendMessage();
-
         }
-
-        private void txtMessageBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            LoginBegin();
-
+            LoginError.Clear();
+            InputValidation valid = new InputValidation();
+            if (valid.EmailValidation(txtUserEmail.Text))
+            {
+                if (valid.PasswordValidation(txtPassword.Text))
+                {
+                    LoginError.Clear();
+                    LoginBegin();
+                }
+                else { LoginError.SetError(this.txtPassword, "Incorrect password format"); }
+            }
+            else { LoginError.SetError(this.txtUserEmail, "Incorrect email format"); }
         }
-
         private void btnReg_Click(object sender, EventArgs e)
         {
-            RegistrationBegin();
+            RegError.Clear();
+            InputValidation valid = new InputValidation();
+            if (valid.NameValidation(txtUsername.Text))
+            {
+                if (valid.EmailValidation(txtRegEmail.Text))
+                {
+                    if (valid.PasswordValidation(txtRegPassword.Text))
+                    {
+                        RegError.Clear();
+                        RegistrationBegin();
+                    }
+                    else { RegError.SetError(this.txtRegPassword, "Incorrect password format"); }
+                }
+                else { RegError.SetError(this.txtRegEmail, "Incorrect email format"); }
+            }
+            else { RegError.SetError(this.txtUsername, "Incorrect username format"); }
         }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Logout();
+            Application.Exit();
+        }
+        private void btnLogout_Click(object sender, EventArgs e){ Logout(); }
+
         #endregion
 
 
-    }
-<<<<<<< HEAD
-    class Authenticator
-    {
-        Aes aesKey;
-        public Authenticator()
-        {
-            aesKey = Aes.Create();
-        }
-        public string encryptMessage(string message)
-        {
-            try
-            {
-                byte[] encryptedData;
-                string encryptedString = "";
-                ICryptoTransform encryptor = aesKey.CreateEncryptor();
-                using (MemoryStream msEncrypt = new MemoryStream())
-                {
-                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
-                    {
-                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
-                        {
-                            swEncrypt.Write(message);
-                        }
-                        encryptedData = msEncrypt.ToArray();
-                    }
-                }
-                encryptedString = Encoding.Unicode.GetString(encryptedData);
-                return encryptedString;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-        }
-        public string decryptMessage(string message)
-        {
-            try
-            {
-                string decryptedString = "";
-                byte[] encryptedData = Encoding.Unicode.GetBytes(message);
-                ICryptoTransform decryptor = aesKey.CreateDecryptor();
-                using (MemoryStream msDecrypt = new MemoryStream(encryptedData))
-                {
-                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
-                    {
-                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
-                        {
-                            decryptedString = srDecrypt.ReadToEnd();
-                        }
-                    }
-                }
-                return decryptedString;
-            }
-            catch (Exception)
-            {
-                return message;
-                //error log
-            }
-
-        }
-        public byte[] getEncryptedAesKey(string key)
-        {
-            var pubCSP = new RSACryptoServiceProvider();
-            pubCSP.FromXmlString(key);
-            byte[] byteEncryptedAES = pubCSP.Encrypt(aesKey.Key, RSAEncryptionPadding.Pkcs1);
-            //key = Encoding.Unicode.GetString(byteEncryptedAES);
-            return byteEncryptedAES;
-        }
-        public byte[] getEncryptedAesIV(string key)
-        {
-            string iv;
-            var pubCSP = new RSACryptoServiceProvider();
-            pubCSP.FromXmlString(key);
-           byte[] byteEncryptedAES = pubCSP.Encrypt(aesKey.IV, RSAEncryptionPadding.Pkcs1);
-
-
-            //iv = Encoding.Unicode.GetString(byteEncryptedAES);
-            return byteEncryptedAES;
-        }
-    }
-=======
->>>>>>> parent of 895f512 (progress baby progress)
-
-
-    class Message //Default message recieved 
-    {
-        public string id;
-        public string message; //Additional serialised Message
-    }
-    class HandShakeMessage //ID CODE 0
-    {
-        public string RSAPublicKey;
-        public string EncryptedAESKey;
-        public string EncryptedAESIV;
-        public bool Confirmation;
-        public string SessionSalt;
-    }
-    class LoginInformation //ID CODE 1
-    {
-        public string confirmation;
-        public string stage;
-        public string Email;
-        public string accountSalt;
-        public string sessionSalt;
-        public string passwordHash;
-    }
-    class RegistrationInformation //ID CODE 2
-    {
-        public string Name;
-        public string Email;
-        public string PasswordHash;
-        public string AccountSalt;
-        public string stage;
-        public string confirmation;
-    }
-    class StandardMessage //ID CODE 3
-    {
-        public string message;
     }
 }

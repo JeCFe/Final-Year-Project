@@ -10,6 +10,7 @@ namespace New_SSL_Server
 {
     class Server
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger("Server.cs");
         private static Mutex removeClient = new Mutex();
         private static Mutex databaseAddMutex = new Mutex();
         public IPAddress ip = IPAddress.Parse("192.168.0.23");
@@ -20,14 +21,6 @@ namespace New_SSL_Server
         public X509Certificate2 cert = new X509Certificate2(certPath, "SecureChat");
         public static List<ClientHandler> clientHandlers = new List<ClientHandler>();
         public static Authenticator auth;
-
-        //static void Main(string[] args)
-        //{
-        //    auth = new Authenticator();
-        //    auth.Initalise();
-        //    auth.validateAdmin();
-        //    Program p = new Program();
-        //}
 
         public AccountData AccountLookup(string email)
         {
@@ -41,6 +34,7 @@ namespace New_SSL_Server
                 Console.WriteLine("Server Started");
                 server = new TcpListener(IPAddress.Any, port);
                 server.Start();
+                log.Info("Server instance started");
                 Listen();
             }
             catch (ThreadAbortException e)
@@ -63,10 +57,15 @@ namespace New_SSL_Server
                 clientHandlers.Add(client); //Adds client to clienthandlers
             }
         }
+        public void LogClientOut(AccountData Client)
+        {
+            auth.LogClientOut(Client);
+        }
         public void removeClientFromClientList(ClientHandler client)
         {
             removeClient.WaitOne();
             clientHandlers.Remove(client);
+            log.Info("Client disconnected");
             removeClient.ReleaseMutex();
         }
         public static void broadcast(string msg)
@@ -83,10 +82,8 @@ namespace New_SSL_Server
         public void RegNewAccount(AccountData ad)
         {
             //lock
-            Console.WriteLine(ad.getName() + " is waiting");
             databaseAddMutex.WaitOne();
             auth.RegNewAccount(ad);
-            Console.WriteLine(ad.getName() + " is Completed");
             databaseAddMutex.ReleaseMutex();
         }
         public byte[] decryptAESKey(byte[] message)
@@ -96,7 +93,6 @@ namespace New_SSL_Server
         public string getPublicKey()
         {
             return auth.getPublicRSA();
-
         }
     }
 }

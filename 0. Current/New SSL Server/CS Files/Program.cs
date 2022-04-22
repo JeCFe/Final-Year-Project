@@ -6,10 +6,13 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 
+[assembly: log4net.Config.XmlConfigurator(Watch = true)] //Wwatch ensure if the config is changed then the program will react in realtime
+
 namespace New_SSL_Server
 {
     class Program
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger("Program.cs");
         private static Authenticator auth;
         private static InputValidation valid = new InputValidation();
         private static AdminDetails adminDetails;
@@ -53,12 +56,9 @@ namespace New_SSL_Server
                         RemoveAdmin();
                         break;
                     case 5:
-                        AddUser();
-                        break;
-                    case 6:
                         RemoveUser();
                         break;
-                    case 7:
+                    case 6:
                         ShowLogs();
                         break;
                     default:
@@ -104,15 +104,15 @@ namespace New_SSL_Server
             } while (!endLoop);
             View.setLastAction("Admin Added");
         }
-        private static void RemoveAdmin() { }
-        private static void AddUser() { }
-        private static void RemoveUser() { }
+        private static void RemoveAdmin() { auth.DeleteAdmin(); }
+        private static void RemoveUser() { auth.DeleteUser(); Console.WriteLine("These changes will be reflected the next time the server is run"); }
         private static void ShowLogs() { }
         private static void AdminLogin()
         {
             string adminUsername = null;
             string adminPassword = null;
             bool endLoop = false;
+            bool authorise = false;
             do
             {
                 View.Intro();
@@ -133,10 +133,22 @@ namespace New_SSL_Server
                 } while (!endLoop);
                 //We have the admin username and password
                 adminDetails = auth.validateAdmin(adminUsername, adminPassword);
-                if (adminDetails.getAuthToken() == null){ Console.WriteLine("Incorrect username or password"); Console.ReadLine(); Console.Clear(); }
-                if(adminDetails.getAuthToken() != auth.ValidateAuthToken()) { Console.WriteLine("Authorisation error occurred"); Console.ReadLine(); Console.Clear(); adminDetails.setAdminDetails(null, null); }
-            } while (adminDetails.getAuthToken() == null);
-
+                if (adminDetails == null)
+                { 
+                    Console.WriteLine("Incorrect username or password"); 
+                    Console.ReadLine(); Console.Clear();
+                    authorise = false;
+                }
+                else if(adminDetails.getAuthToken() != auth.ValidateAuthToken()) 
+                { 
+                    Console.WriteLine("Authorisation error occurred");
+                    Console.ReadLine(); Console.Clear(); 
+                    adminDetails.setAdminDetails(null, null);
+                    authorise = false;
+                }
+                else { authorise = true; }
+            } while (!authorise);
+            log.Info(adminDetails.getName() + " logged in");
             Console.Clear();
         }
     }

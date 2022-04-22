@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtMessageBox = new System.Windows.Forms.TextBox();
             this.txtMsgToSend = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
@@ -45,8 +46,13 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.RegError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.LoginError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnLogout = new System.Windows.Forms.Button();
             this.gBXLogin.SuspendLayout();
             this.gBXRegistraion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RegError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginError)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMessageBox
@@ -59,7 +65,6 @@
             this.txtMessageBox.Size = new System.Drawing.Size(356, 358);
             this.txtMessageBox.TabIndex = 0;
             this.txtMessageBox.Visible = false;
-            this.txtMessageBox.TextChanged += new System.EventHandler(this.txtMessageBox_TextChanged);
             // 
             // txtMsgToSend
             // 
@@ -75,7 +80,7 @@
             // 
             this.btnSend.Location = new System.Drawing.Point(12, 443);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(356, 39);
+            this.btnSend.Size = new System.Drawing.Size(283, 39);
             this.btnSend.TabIndex = 2;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -93,6 +98,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(70, 45);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 4;
             // 
@@ -108,14 +114,14 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(75, 48);
+            this.txtUsername.Location = new System.Drawing.Point(75, 15);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 6;
             // 
             // txtRegEmail
             // 
-            this.txtRegEmail.Location = new System.Drawing.Point(75, 22);
+            this.txtRegEmail.Location = new System.Drawing.Point(75, 44);
             this.txtRegEmail.Name = "txtRegEmail";
             this.txtRegEmail.Size = new System.Drawing.Size(100, 20);
             this.txtRegEmail.TabIndex = 7;
@@ -124,6 +130,7 @@
             // 
             this.txtRegPassword.Location = new System.Drawing.Point(75, 74);
             this.txtRegPassword.Name = "txtRegPassword";
+            this.txtRegPassword.PasswordChar = '*';
             this.txtRegPassword.Size = new System.Drawing.Size(100, 20);
             this.txtRegPassword.TabIndex = 8;
             // 
@@ -188,7 +195,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(7, 77);
+            this.lblPassword.Location = new System.Drawing.Point(6, 74);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
             this.lblPassword.TabIndex = 11;
@@ -197,37 +204,60 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(7, 51);
+            this.lblEmail.Location = new System.Drawing.Point(7, 18);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.Size = new System.Drawing.Size(55, 13);
             this.lblEmail.TabIndex = 10;
-            this.lblEmail.Text = "Email";
+            this.lblEmail.Text = "Username";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(6, 25);
+            this.lblName.Location = new System.Drawing.Point(6, 44);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(55, 13);
+            this.lblName.Size = new System.Drawing.Size(32, 13);
             this.lblName.TabIndex = 8;
-            this.lblName.Text = "Username";
+            this.lblName.Text = "Email";
+            // 
+            // RegError
+            // 
+            this.RegError.ContainerControl = this;
+            // 
+            // LoginError
+            // 
+            this.LoginError.ContainerControl = this;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(301, 443);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(67, 39);
+            this.btnLogout.TabIndex = 12;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Visible = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 171);
+            this.ClientSize = new System.Drawing.Size(496, 169);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.gBXRegistraion);
             this.Controls.Add(this.gBXLogin);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMsgToSend);
             this.Controls.Add(this.txtMessageBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Chat Client";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.gBXLogin.ResumeLayout(false);
             this.gBXLogin.PerformLayout();
             this.gBXRegistraion.ResumeLayout(false);
             this.gBXRegistraion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RegError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,6 +282,9 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.ErrorProvider RegError;
+        private System.Windows.Forms.ErrorProvider LoginError;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
 
