@@ -390,11 +390,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jessi\\OneDrive\\Desktop\\Proto\\Logger Trial\\Logger Trial.csproj",
+      "projectUniqueName": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Logging Prototype\\Logger Trial\\Logger Trial.csproj",
       "projectName": "Logger Trial",
-      "projectPath": "C:\\Users\\Jessi\\OneDrive\\Desktop\\Proto\\Logger Trial\\Logger Trial.csproj",
+      "projectPath": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Logging Prototype\\Logger Trial\\Logger Trial.csproj",
       "packagesPath": "C:\\Users\\Jessi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jessi\\OneDrive\\Desktop\\Proto\\Logger Trial\\obj\\",
+      "outputPath": "C:\\Users\\Jessi\\OneDrive\\Documents\\GitHub\\Final-Year-Project\\2. Prototypes\\Logging Prototype\\Logger Trial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jessi\\AppData\\Roaming\\NuGet\\NuGet.Config",

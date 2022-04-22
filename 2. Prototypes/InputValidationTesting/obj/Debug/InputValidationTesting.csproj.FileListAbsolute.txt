@@ -1,6 +1,0 @@
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\InputValidationTesting\bin\Debug\InputValidationTesting.exe.config
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\InputValidationTesting\bin\Debug\InputValidationTesting.exe
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\InputValidationTesting\bin\Debug\InputValidationTesting.pdb
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\InputValidationTesting\obj\Debug\InputValidationTesting.csprojAssemblyReference.cache
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\InputValidationTesting\obj\Debug\InputValidationTesting.exe
-C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\2. Prototypes\InputValidationTesting\obj\Debug\InputValidationTesting.pdb
