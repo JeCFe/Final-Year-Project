@@ -207,6 +207,9 @@ namespace Forms_SSL_Client
                 case "3":
                     LogInFinalStage(LINFO);
                     break;
+                case "5":
+                    ServerLogout();
+                    break;
                 default:
                     break;
             }
@@ -259,6 +262,11 @@ namespace Forms_SSL_Client
             M.message = Serializer.Serialize(logout);
             string MainMessage = Serializer.Serialize(M);
             SendDataToServer(MainMessage);
+        }
+        private void ServerLogout()
+        {
+            MessageBox.Show("Server has stopped");
+            Application.Exit();
         }
         #endregion
 

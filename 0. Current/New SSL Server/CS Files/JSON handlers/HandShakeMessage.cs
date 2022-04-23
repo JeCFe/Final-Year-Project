@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace New_SSL_Server
+﻿namespace New_SSL_Server
 {
+    // This class handles data requires for serialisation and deserialsation for handshake message
     class HandShakeMessage //ID CODE 0
     {
         public string stage;

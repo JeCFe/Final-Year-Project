@@ -24,3 +24,12 @@ C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\Forms SSL Client\obj\Debug\Fo
 C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\Forms SSL Client\bin\Debug\Forms SSL Client.exe.config
 C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\Forms SSL Client\bin\Debug\Forms SSL Client.exe
 C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\Forms SSL Client\bin\Debug\Forms SSL Client.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\Forms SSL Client\bin\Debug\Forms SSL Client.exe.config
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\Forms SSL Client\bin\Debug\Forms SSL Client.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\Forms SSL Client\bin\Debug\Forms SSL Client.pdb
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\Forms SSL Client\obj\Debug\Forms SSL Client.csprojAssemblyReference.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\Forms SSL Client\obj\Debug\Forms_SSL_Client.Form1.resources
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\Forms SSL Client\obj\Debug\Forms_SSL_Client.Properties.Resources.resources
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\Forms SSL Client\obj\Debug\Forms SSL Client.csproj.GenerateResource.cache
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\Forms SSL Client\obj\Debug\Forms SSL Client.exe
+C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\Forms SSL Client\obj\Debug\Forms SSL Client.pdb

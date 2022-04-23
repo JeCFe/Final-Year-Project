@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace New_SSL_Server
+﻿namespace New_SSL_Server
 {
+    //This class is used for user reg serialisation and deserialisation
     class RegistrationInformation //ID CODE 2
     {
         public string Name;

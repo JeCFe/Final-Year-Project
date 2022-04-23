@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace New_SSL_Server
+﻿namespace New_SSL_Server
 {
+    //This class is used for standard message serialisation and deserialisation
     class StandardMessage //ID CODE 3
     {
         public string message;

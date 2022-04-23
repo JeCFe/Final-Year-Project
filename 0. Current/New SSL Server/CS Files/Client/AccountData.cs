@@ -1,12 +1,12 @@
 ﻿using MongoDB.Bson;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace New_SSL_Server
 {
+    /*
+     This class is responible for the local storage of each user account details 
+     With functions required to convert from MongoDB BsonDocument to a format that JavaScript Serializer can understand
+    */
+
     class AccountData
     {
         protected string Name;
@@ -15,6 +15,7 @@ namespace New_SSL_Server
         protected string Salt;
         protected bool loggedIn;
 
+        //This function converts from BsonDocument to this program standard storage method
         public AccountData(BsonDocument data)
         {
             Name = data["Name"].AsString;
@@ -23,6 +24,8 @@ namespace New_SSL_Server
             Salt = data["Salt"].AsString;
             loggedIn = false;
         }
+
+        //This function can data from a Reg Info object and saves the content 
         public AccountData(RegistrationInformation RINFO)
         {
             Name = RINFO.Name;
@@ -31,11 +34,13 @@ namespace New_SSL_Server
             Salt = RINFO.AccountSalt;
             loggedIn = false;
         }
-        public string getName() { return Name; }
-        public string getEmail() { return Email; }
-        public string getHash() { return Hash; }
-        public string getSalt() { return Salt; }
-        public bool getLoggedIn() { return loggedIn; }
-        public void setLoggedIn(bool log) { loggedIn = log; }
+
+        //The following functions are simple getters and setter functions
+        public string GetName() { return Name; }
+        public string GetEmail() { return Email; }
+        public string GetHash() { return Hash; }
+        public string GetSalt() { return Salt; }
+        public bool GetLoggedIn() { return loggedIn; }
+        public void SetLoggedIn(bool log) { loggedIn = log; }
     }
 }
