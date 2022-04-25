@@ -89,18 +89,37 @@ namespace New_SSL_Server
         /*
          When admin choses to start the server the server thread is started and last action updated
          */
-        private static void ServerStart() { serverThread.Start(); View.SetLastAction("Server Started"); }
+        private static void ServerStart()
+        {
+            try
+            {
+                serverThread.Start();
+                View.SetLastAction("Server Started");
+            }
+            catch (Exception)
+            {
+                log.Error("Attempted to deploy server with server instance already running");
+            }
+        }
 
         /*
             When admin choses to close the server the following happens
         */
         private static void ServerAbort()
         {
-            server.ServerKill(); //Server killer function inside the running server is called, this kills all internal processes
-            log.Info("Server killed"); //Log event update
-            View.SetLastAction("Server Killed"); //Change last action
-            server = new Server(); //Define a new server for when another server instance is started
-            serverThread = new Thread(delegate () { server.ServerStarter(auth); }); //Redefine the serverThread for when a new server instance is called
+            try
+            {
+                server.ServerKill(); //Server killer function inside the running server is called, this kills all internal processes
+                log.Info("Server killed"); //Log event update
+                View.SetLastAction("Server Killed"); //Change last action
+                server = new Server(); //Define a new server for when another server instance is started
+                serverThread = new Thread(delegate () { server.ServerStarter(auth); }); //Redefine the serverThread for when a new server instance is called
+            }
+            catch (Exception)
+            {
+                log.Error("Attempted to stop a server with no server instance running");
+            }
+
         }
 
         /*
@@ -165,7 +184,24 @@ namespace New_SSL_Server
          Take an admin choice of what log to view
          Displays that log
         */
-        private static void ShowLogs() { View.ShowLogList(); }
+        private static void ShowLogs()
+        {
+            bool isLoopEnd = false;
+            int menuInput;
+            string filePath = View.ShowLogList();
+            do
+            {
+                string choice = View.ShowLogMenu(filePath);
+                if (int.TryParse(choice, out menuInput))
+                {
+                    menuInput = int.Parse(choice);
+                    int menuLowerBound = 0;
+                    int menuUpperBound = 4;
+                    if (menuInput > menuLowerBound && menuInput <= menuUpperBound){ isLoopEnd = true; }
+                }
+            } while (!isLoopEnd);
+            View.ShowLogMenuResult(menuInput, filePath);
+        }
 
         /*
             This function is vital for the secure log in of an admin

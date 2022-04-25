@@ -36,6 +36,8 @@ namespace Forms_SSL_Client
         StandardMessage SM = new StandardMessage();
         delegate void DecodeMessageDelegate(string message);
 
+        private bool connected = false; //this variable handles if the client is connected to the server
+
         public Form1()
         {
 
@@ -56,6 +58,7 @@ namespace Forms_SSL_Client
                     sslStream.AuthenticateAsClient("SecureChat");
                     reader = new StreamReader(sslStream, Encoding.Unicode);
                     writer = new StreamWriter(sslStream, Encoding.Unicode);
+                    connected = true;
                     listeningThread = new Thread(new ThreadStart(listenForMessages));
                     listeningThread.Start();
                     connectionEstablished = true;
@@ -67,7 +70,6 @@ namespace Forms_SSL_Client
         }
         private void listenForMessages()
         {
-            bool connected = true;
             while (connected)
             {
                 try
@@ -79,6 +81,7 @@ namespace Forms_SSL_Client
                 {
                     //Set up reconnection processes
                     connected = false;
+                    listeningThread.Abort();
                     MessageBox.Show("Unknown error with server connection");
                 }
 
@@ -95,7 +98,7 @@ namespace Forms_SSL_Client
             if (message == null)
             {
                 MessageBox.Show("Null message"); //Potential DDOS Close client 
-                //Send message to server to log out 
+                Logout();
                 Application.Exit();
             }
             else
@@ -257,6 +260,7 @@ namespace Forms_SSL_Client
             LoginInformation logout = new LoginInformation();
             Message M = new Message();
             logout.stage = "5";
+            logout.name = "close";
             M.id = "1";
             JavaScriptSerializer Serializer = new JavaScriptSerializer();
             M.message = Serializer.Serialize(logout);
@@ -402,6 +406,8 @@ namespace Forms_SSL_Client
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Logout();
+            connected = false;
+            listeningThread.Abort();
             Application.Exit();
         }
         private void btnLogout_Click(object sender, EventArgs e){ Logout(); }

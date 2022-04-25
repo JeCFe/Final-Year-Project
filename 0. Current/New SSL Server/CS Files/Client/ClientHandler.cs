@@ -364,7 +364,7 @@ namespace New_SSL_Server
             then a message is sent to the client informaing them that they are being logged out
                 this action will result in the client side being closed
         */
-        private void Logout(bool clientSide)
+        private void Logout(bool clientSide, LoginInformation logout = null)
         {
             if (clientSide)
             {
@@ -374,6 +374,12 @@ namespace New_SSL_Server
                     {
                         server.LogClientOut(ClientUser);
                     }
+                }
+                //This means client closed their application and to remove everything
+                if(logout.name == "close")
+                {
+                    log.Info("Client closed application and disconnected");
+                    server.RemoveClientFromClientList(this); //Ensures removal of client from client list
                 }
             }
             else
@@ -419,7 +425,6 @@ namespace New_SSL_Server
             log.Info("Client disconnected");
             Logout(false);
             server.RemoveClientFromClientList(this); //Ensures removal of client from client list
-
         }
 
         /*

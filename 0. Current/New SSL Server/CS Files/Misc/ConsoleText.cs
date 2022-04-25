@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace New_SSL_Server
 {
@@ -8,22 +10,25 @@ namespace New_SSL_Server
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger("ConsoleText.cs");
         private static AdminDetails AdminDets = new AdminDetails();
+        private static FileHandler FileHandler = new FileHandler();
         private static string lastAction = "";
+        private static string lastError = "";
 
         //This function is used to set the current admin detials
         public ConsoleText(AdminDetails ad) { AdminDets = ad; }
 
+
+
         //This function is used to set the last action preformed by the admin
         public void SetLastAction(string action) { lastAction = action; }
+
 
         //This function is used to display the header above the menu options displaing the admin name and last action
         public void Header()
         {
             Console.WriteLine("You are currently Logged in as: " + AdminDets.getName());
-            if (lastAction != "")
-            {
-                Console.WriteLine("Last Action commited: " + lastAction);
-            }
+            Console.WriteLine("Last Action commited: " + lastAction);
+            Console.WriteLine("Last error: " + FileHandler.LastError());
         }
 
         //This function displays an intro to the server
@@ -71,10 +76,10 @@ namespace New_SSL_Server
          Error checks to ensure admin made a valid choice
          When admin has made valid choice will call ShowLogs passing the chosen path
         */
-        public void ShowLogList()
+        public string ShowLogList()
         {
             Header();
-            string[] fileEntries = Directory.GetFiles("..\\Debug\\logs");
+            string[] fileEntries = FileHandler.LogEntries();
             int count = 1;
             int input = 0;
             foreach (string file in fileEntries)
@@ -91,41 +96,35 @@ namespace New_SSL_Server
             } while (input < 1 || input > count);
             Clear();
             SetLastAction("Show Log List");
-            ShowLogs(fileEntries[input - 1]);
+            return fileEntries[input - 1];
+        }
+
+        public string ShowLogMenu(string path)
+        {
+            Clear();
+            Header();
+            Console.WriteLine("Viewing log: " + new DirectoryInfo(path).Name);
+            Console.WriteLine("Please select an option from below: ");
+            Console.WriteLine("[1] All logs");
+            Console.WriteLine("[2] Info Logs");
+            Console.WriteLine("[3] Error Logs");
+            Console.WriteLine("[4] Fatal Logs");
+            Console.Write("Please enter choice: ");
+            return Console.ReadLine();
         }
 
         /*
-         This function shows the contents of the chosen log
-         Using FileStream and setting the FileShare to write means that the logger is able to write to the file while reading 
-         In testing this proved to invoke no race condition errors
-         Each line is displayed onto the screen when the admin has read they can press anykey and be returned to the main menu
+         This function is used to call use FileHandler to retrieve the correct logs
+         Then display them one by one
         */
-        private void ShowLogs(string path)
+        public void ShowLogMenuResult(int choice, string path)
         {
-            try
-            {
-                Clear();
-                Header();
-                Console.WriteLine();
-                using (FileStream fileStream = new FileStream(
-                    path,
-                    FileMode.Open,
-                    FileAccess.Read,
-                    FileShare.Write))
-                {
-                    using (StreamReader streamReader = new StreamReader(fileStream))
-                    {
-                        SetLastAction("View logs");
-                        Console.WriteLine(streamReader.ReadToEnd());
-                        Console.WriteLine("Press any key to continue");
-                        Console.Read();
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                log.Error("Error displaying logs. Error message: " + e.ToString());
-            }
+            List<string> logsToShow = FileHandler.ReteriveSpecificLogs(choice, path);
+            Clear();
+            Header();
+            foreach (string log in logsToShow){ Console.WriteLine(log); }
+            Console.WriteLine("Press any key to continue");
+            Console.ReadLine();
         }
 
         //This function simply clears the screen

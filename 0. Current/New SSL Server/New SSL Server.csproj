@@ -168,6 +168,7 @@
     <Compile Include="CS Files\Misc\InputValidation.cs" />
     <Compile Include="CS Files\JSON handlers\LoginInformation.cs" />
     <Compile Include="CS Files\JSON handlers\Message.cs" />
+    <Compile Include="CS Files\Misc\FileHandler.cs" />
     <Compile Include="CS Files\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CS Files\JSON handlers\RegistrationInformation.cs" />
