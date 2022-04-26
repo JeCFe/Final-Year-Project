@@ -1,5 +1,6 @@
 ﻿namespace New_SSL_Server
 {
+    //This class is responsible for managing the logged in admin details 
     class AdminDetails
     {
         private string Name;

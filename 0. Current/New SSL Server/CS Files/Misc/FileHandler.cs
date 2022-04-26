@@ -56,6 +56,7 @@ namespace New_SSL_Server
         */
         public string LastError()
         {
+            return "";
             string[] fileEntries = LogEntries();
             string path = fileEntries[fileEntries.Length - 1];
             string logCode = "ERROR";

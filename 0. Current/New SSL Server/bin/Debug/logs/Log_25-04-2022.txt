@@ -1,0 +1,56 @@
+2022-04-25 17:23:22,072 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-25 17:23:22,116 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-25 17:23:28,749 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-25 17:23:53,605 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-25 17:23:53,653 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-25 17:23:59,878 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-25 17:25:23,435 (4) [INFO ] Server.cs - Server instance started
+2022-04-25 17:25:29,182 (25) [INFO ] ClientHandler.cs - Client connection
+2022-04-25 17:25:29,207 (25) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-25 17:25:29,624 (27) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-25 17:25:49,909 (27) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-25 17:26:45,065 (30) [INFO ] ClientHandler.cs - Client connection
+2022-04-25 17:26:45,101 (30) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-25 17:26:45,282 (32) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-25 17:29:09,271 (32) [INFO ] AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-25 17:29:09,363 (32) [INFO ] AuthenticationInformation.cs - User database updated
+2022-04-25 17:29:47,274 (32) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-25 17:33:17,132 (32) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-25 17:33:17,139 (32) [ERROR] ClientHandler.cs - System.NullReferenceException: Object reference not set to an instance of an object.
+   at New_SSL_Server.ClientHandler.Logout(Boolean clientSide, LoginInformation logout) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 379
+   at New_SSL_Server.ClientHandler.LoginManager(Message M) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 278
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 128
+2022-04-25 17:33:17,140 (32) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-25 17:33:17,140 (32) [INFO ] Server.cs - Client disconnected
+2022-04-25 17:33:23,091 (27) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-25 17:33:23,096 (27) [ERROR] ClientHandler.cs - System.NullReferenceException: Object reference not set to an instance of an object.
+   at New_SSL_Server.ClientHandler.Logout(Boolean clientSide, LoginInformation logout) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 379
+   at New_SSL_Server.ClientHandler.LoginManager(Message M) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 278
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 128
+2022-04-25 17:33:23,101 (27) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-25 17:33:23,102 (27) [INFO ] Server.cs - Client disconnected
+2022-04-25 17:33:31,949 (1) [INFO ] Program.cs - Server killed
+2022-04-25 17:33:31,959 (4) [INFO ] Server.cs - Potential server closing view error for more info
+2022-04-25 17:33:31,962 (4) [ERROR] Server.cs - System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-25 17:46:18,078 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-25 17:46:18,127 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-25 17:46:29,726 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-25 17:46:30,422 (4) [INFO ] Server.cs - Server instance started
+2022-04-25 17:46:54,541 (16) [INFO ] ClientHandler.cs - Client connection
+2022-04-25 17:46:54,557 (16) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-25 17:46:54,843 (26) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477

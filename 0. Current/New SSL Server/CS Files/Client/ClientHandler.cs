@@ -460,7 +460,7 @@ namespace New_SSL_Server
             catch (Exception e)
             {
                 log.Error(e.ToString());
-                throw;
+                return null;
             }
         }
 

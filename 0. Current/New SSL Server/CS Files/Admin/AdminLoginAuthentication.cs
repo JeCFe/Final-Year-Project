@@ -2,6 +2,9 @@
 
 namespace New_SSL_Server
 {
+    /*
+     This class is used for the storage of admin login data when reterieved from MongoDB
+    */
     class AdminLoginAuthentication
     {
         protected string hashedPassword;
