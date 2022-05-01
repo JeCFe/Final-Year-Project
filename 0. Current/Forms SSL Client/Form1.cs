@@ -64,7 +64,7 @@ namespace Forms_SSL_Client
                     connectionEstablished = true;
                 }
                 catch (Exception e) {
-                    MessageBox.Show(e.ToString());
+                    MessageBox.Show("Server is currently not running!\nPlease wait for server to start");
                 }
             }
         }
@@ -237,7 +237,6 @@ namespace Forms_SSL_Client
             }
             else
             {
-                MessageBox.Show("NO FOUND EMAIL");
                 LoginError.SetError(this.txtUserEmail, "No email found");
             }
 
@@ -251,21 +250,23 @@ namespace Forms_SSL_Client
             }
             else
             {
-                MessageBox.Show("Unsuccessful");
+                LoginError.SetError(txtPassword, "Invalid password or this account is already logged in");
             }
         }//Client stage 3
-        private void Logout()
+        private void Logout(bool disconnect = true)
         {
             ElementVisability(false);
             LoginInformation logout = new LoginInformation();
             Message M = new Message();
             logout.stage = "5";
-            logout.name = "close";
+            if (disconnect) { logout.name = "close"; }
             M.id = "1";
             JavaScriptSerializer Serializer = new JavaScriptSerializer();
             M.message = Serializer.Serialize(logout);
             string MainMessage = Serializer.Serialize(M);
             SendDataToServer(MainMessage);
+            Form1.ActiveForm.Text = "Chat Client";
+            LINFO = new LoginInformation();
         }
         private void ServerLogout()
         {
@@ -410,7 +411,7 @@ namespace Forms_SSL_Client
             listeningThread.Abort();
             Application.Exit();
         }
-        private void btnLogout_Click(object sender, EventArgs e){ Logout(); }
+        private void btnLogout_Click(object sender, EventArgs e){ Logout(false); }
 
         #endregion
 

@@ -27,7 +27,7 @@ namespace New_SSL_Server
         public void Header()
         {
             Console.WriteLine("You are currently Logged in as: " + AdminDets.getName());
-            Console.WriteLine("Last Action commited: " + lastAction);
+            Console.WriteLine("Last Action committed: " + lastAction);
             Console.WriteLine("Last error: " + FileHandler.LastError());
         }
 

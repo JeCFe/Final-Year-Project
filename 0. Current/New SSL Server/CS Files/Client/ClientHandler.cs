@@ -275,7 +275,7 @@ namespace New_SSL_Server
                     HashComparision(LINFO);
                     break;
                 case "5":
-                    Logout(true);
+                    Logout(true, LINFO);
                     break;
                 default:
                     break;

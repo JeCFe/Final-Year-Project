@@ -91,8 +91,7 @@ namespace New_SSL_Server
                 }
                 catch (Exception e)
                 {
-                    log.Info("Potential server closing view error for more info");
-                    log.Error(e.ToString());
+                    log.Info("Potential server closing view error for more info: " + e.ToString());
                 }
 
             }

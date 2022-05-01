@@ -6,7 +6,7 @@
    <Modules>
     <Module Name="new ssl server.exe">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2022-04-29 19:54:24Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'New SSL Server.exe' with a strong name key.</Issue>
       </Message>
      </Messages>
@@ -17,31 +17,20 @@
          <Members>
           <Member Name="#DecryptMessage(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-29 19:54:24Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="490">Object 'cs' can be disposed more than once in method 'ClientHandler.DecryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 490</Issue>
              <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="490">Object 'ms' can be disposed more than once in method 'ClientHandler.DecryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 490, 491</Issue>
             </Message>
-            <Message Id="reader" TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="NonBreaking">
+            <Message Id="reader" TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500" Status="Active" Created="2022-04-29 19:54:24Z" FixCategory="NonBreaking">
              <Issue Name="Local" Certainty="95" Level="Error" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="474">'reader', a variable declared in 'ClientHandler.DecryptMessage(string)', has the same name as an instance field on the type. Change the name of one of these items.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EncryptMessage(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-29 19:54:24Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="455">Object 'cs' can be disposed more than once in method 'ClientHandler.EncryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 455</Issue>
              <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="455">Object 'ms' can be disposed more than once in method 'ClientHandler.EncryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 455, 456</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
-        <Type Name="ConsoleText" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
-         <Members>
-          <Member Name="#Header()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
-           <Messages>
-            <Message Id="commited" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="ConsoleText.cs" Line="30">Correct the spelling of the unrecognized token 'commited' in the literal '"Last Action commited: "'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -51,28 +40,9 @@
          <Members>
           <Member Name="#GetLogEnteries(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="123">Object 'fileStream' can be disposed more than once in method 'FileHandler.GetLogEnteries(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 122, 123, 124</Issue>
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="122">Object 'streamReader' can be disposed more than once in method 'FileHandler.GetLogEnteries(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 122</Issue>
-            </Message>
-           </Messages>
-          </Member>
-          <Member Name="#LastError()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
-           <Messages>
-            <Message Id="fileContentWithError" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="58">'FileHandler.LastError()' declares a variable, 'fileContentWithError', of type 'List&lt;string&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
-            </Message>
-            <Message Id="fileEntries" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="58">'FileHandler.LastError()' declares a variable, 'fileEntries', of type 'string[]', which is never used or is only assigned to. Use this variable or remove it.</Issue>
-            </Message>
-            <Message Id="lastEntry" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="58">'FileHandler.LastError()' declares a variable, 'lastEntry', of type 'string', which is never used or is only assigned to. Use this variable or remove it.</Issue>
-            </Message>
-            <Message Id="logCode" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="58">'FileHandler.LastError()' declares a variable, 'logCode', of type 'string', which is never used or is only assigned to. Use this variable or remove it.</Issue>
-            </Message>
-            <Message Id="path" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="58">'FileHandler.LastError()' declares a variable, 'path', of type 'string', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-29 19:54:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="122">Object 'fileStream' can be disposed more than once in method 'FileHandler.GetLogEnteries(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 121, 122, 123</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="121">Object 'streamReader' can be disposed more than once in method 'FileHandler.GetLogEnteries(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 121</Issue>
             </Message>
            </Messages>
           </Member>
@@ -82,7 +52,7 @@
          <Members>
           <Member Name="#AdminLogin()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="Authorisation" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2022-04-25 16:23:48Z" FixCategory="DependsOnFix">
+            <Message Id="Authorisation" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2022-04-29 19:54:24Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files" File="Program.cs" Line="257">Correct the spelling of the unrecognized token 'Authorisation' in the literal '"Authorisation error occurred"'.</Issue>
             </Message>
            </Messages>
@@ -110,7 +80,7 @@
   <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
    <Name>Do not dispose objects multiple times</Name>
    <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
-   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 122</Resolution>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 121</Resolution>
    <Owner>RuleOwner</Owner>
    <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
    <Email />
@@ -126,16 +96,6 @@
    <Email />
    <MessageLevel Certainty="75">Warning</MessageLevel>
    <File Name="dataflowrules.dll" Version="16.0.0.0" />
-  </Rule>
-  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
-   <Name>Remove unused locals</Name>
-   <Description>Remove locals that are not used or are only assigned to in method implementations.</Description>
-   <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
-   <Owner />
-   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
-   <Email>[none]</Email>
-   <MessageLevel Certainty="95">Warning</MessageLevel>
-   <File Name="performancerules.dll" Version="16.0.0.0" />
   </Rule>
   <Rule TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500">
    <Name>Variable names should not match field names</Name>
