@@ -1,7 +1,0 @@
-2022-04-22 17:30:44,075 [1] INFO  AuthenticationInformation.cs - Users setup
-2022-04-22 17:30:44,116 [1] INFO  AuthenticationInformation.cs - Admins setup
-2022-04-22 17:30:58,876 [1] INFO  Program.cs - AdminTest logged in
-2022-04-22 17:30:59,781 [4] INFO  Server.cs - Server instance started
-
-
-DAY 20

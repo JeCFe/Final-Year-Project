@@ -1,0 +1,572 @@
+2022-04-29 16:14:41,837 (4) [INFO ] Server.cs - Server instance started
+2022-04-29 16:14:43,588 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:14:44,970 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:14:58,822 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-29 16:14:58,870 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-29 16:15:07,824 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-29 16:15:08,799 (4) [INFO ] Server.cs - Server instance started
+2022-04-29 16:15:09,507 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:15:10,941 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:15:11,559 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:15:12,587 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:15:13,121 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:15:55,504 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:16:30,002 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-29 16:16:30,045 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-29 16:16:43,226 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-29 16:16:50,516 (4) [INFO ] Server.cs - Server instance started
+2022-04-29 16:19:26,298 (1) [INFO ] Program.cs - Server killed
+2022-04-29 16:19:26,308 (4) [INFO ] Server.cs - Potential server closing view error for more info
+2022-04-29 16:19:26,321 (4) [ERROR] Server.cs - System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-29 16:19:31,694 (37) [INFO ] Server.cs - Server instance started
+2022-04-29 16:19:32,688 (1) [INFO ] Program.cs - Server killed
+2022-04-29 16:19:32,693 (37) [INFO ] Server.cs - Potential server closing view error for more info
+2022-04-29 16:19:32,694 (37) [ERROR] Server.cs - System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-29 16:19:33,949 (36) [INFO ] Server.cs - Server instance started
+2022-04-29 16:19:34,453 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:19:35,214 (1) [INFO ] Program.cs - Server killed
+2022-04-29 16:19:35,220 (36) [INFO ] Server.cs - Potential server closing view error for more info
+2022-04-29 16:19:35,221 (36) [ERROR] Server.cs - System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-29 16:19:39,095 (34) [INFO ] Server.cs - Server instance started
+2022-04-29 16:19:40,023 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:19:42,050 (1) [INFO ] Program.cs - Server killed
+2022-04-29 16:19:42,056 (34) [INFO ] Server.cs - Potential server closing view error for more info
+2022-04-29 16:19:42,056 (34) [ERROR] Server.cs - System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-29 16:19:43,098 (1) [ERROR] Program.cs - Attempted to stop a server with no server instance running
+2022-04-29 16:19:44,917 (28) [INFO ] Server.cs - Server instance started
+2022-04-29 16:19:46,703 (1) [INFO ] Program.cs - Server killed
+2022-04-29 16:19:47,656 (38) [INFO ] Server.cs - Server instance started
+2022-04-29 16:19:49,721 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:19:51,374 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:19:52,022 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:19:53,239 (1) [INFO ] Program.cs - Server killed
+2022-04-29 16:19:53,245 (38) [INFO ] Server.cs - Potential server closing view error for more info
+2022-04-29 16:19:53,245 (38) [ERROR] Server.cs - System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-29 16:21:23,760 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-29 16:21:23,806 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-29 16:21:47,533 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-29 16:21:49,336 (4) [INFO ] Server.cs - Server instance started
+2022-04-29 16:21:49,858 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:21:51,102 (1) [INFO ] Program.cs - Server killed
+2022-04-29 16:21:51,116 (4) [INFO ] Server.cs - Potential server closing view error for more info: System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-29 16:21:51,116 (4) [ERROR] Server.cs - Server killed
+2022-04-29 16:22:18,227 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-29 16:22:18,267 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-29 16:22:26,545 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-29 16:22:28,232 (4) [INFO ] Server.cs - Server instance started
+2022-04-29 16:22:29,265 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 16:22:30,098 (1) [INFO ] Program.cs - Server killed
+2022-04-29 16:22:30,113 (4) [INFO ] Server.cs - Potential server closing view error for more info: System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-29 17:10:19,255 (1) [ERROR] Program.cs - Attempted to stop a server with no server instance running
+2022-04-29 18:41:05,688 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-29 18:41:05,735 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-29 18:41:16,523 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-29 18:43:34,403 (1) [INFO ] AuthenticationInformation.cs - New admin account added
+2022-04-29 18:44:59,328 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-29 18:44:59,623 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-29 18:48:22,188 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-29 18:48:22,227 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-29 18:48:30,571 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-29 18:49:02,615 (1) [INFO ] AuthenticationInformation.cs - Admin removed from database
+2022-04-29 18:49:14,728 (1) [ERROR] Program.cs - Attempted to stop a server with no server instance running
+2022-04-29 18:49:16,703 (4) [INFO ] Server.cs - Server instance started
+2022-04-29 18:49:27,394 (1) [INFO ] AuthenticationInformation.cs - New admin account added
+2022-04-29 18:51:12,912 (1) [INFO ] AuthenticationInformation.cs - Admin removed from database
+2022-04-29 18:56:17,011 (1) [INFO ] AuthenticationInformation.cs - User removed from database
+2022-04-29 19:23:44,916 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-29 19:23:44,958 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-29 19:24:23,047 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-29 19:24:24,725 (4) [INFO ] Server.cs - Server instance started
+2022-04-29 19:25:54,577 (18) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 19:25:54,597 (18) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 19:25:54,943 (17) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 19:26:10,466 (17) [ERROR] ClientHandler.cs - System.NullReferenceException: Object reference not set to an instance of an object.
+   at New_SSL_Server.ClientHandler.Logout(Boolean clientSide, LoginInformation logout) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 379
+   at New_SSL_Server.ClientHandler.LoginManager(Message M) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 278
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 128
+2022-04-29 19:26:10,466 (17) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 19:26:10,467 (17) [INFO ] Server.cs - Client disconnected
+2022-04-29 19:26:21,898 (16) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 19:26:21,907 (16) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 19:26:22,101 (17) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 19:29:24,593 (17) [INFO ] AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-29 19:29:24,683 (17) [INFO ] AuthenticationInformation.cs - User database updated
+2022-04-29 20:36:45,150 (17) [INFO ] AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-29 20:36:51,594 (17) [INFO ] AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-29 20:39:56,618 (17) [ERROR] ClientHandler.cs - System.NullReferenceException: Object reference not set to an instance of an object.
+   at New_SSL_Server.ClientHandler.Logout(Boolean clientSide, LoginInformation logout) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 379
+   at New_SSL_Server.ClientHandler.LoginManager(Message M) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 278
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 128
+2022-04-29 20:39:56,618 (17) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 20:39:56,618 (17) [INFO ] Server.cs - Client disconnected
+2022-04-29 20:42:52,396 (13) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 20:42:52,407 (13) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 20:42:52,636 (12) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 20:45:35,967 (12) [INFO ] AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-29 20:45:35,976 (12) [INFO ] AuthenticationInformation.cs - User database updated
+2022-04-29 20:45:49,078 (12) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 20:46:10,442 (12) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 20:46:10,447 (12) [ERROR] ClientHandler.cs - System.NullReferenceException: Object reference not set to an instance of an object.
+   at New_SSL_Server.ClientHandler.Logout(Boolean clientSide, LoginInformation logout) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 379
+   at New_SSL_Server.ClientHandler.LoginManager(Message M) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 278
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 128
+2022-04-29 20:46:10,447 (12) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 20:46:10,448 (12) [INFO ] Server.cs - Client disconnected
+2022-04-29 20:46:17,946 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 20:46:23,037 (26) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 20:46:23,048 (26) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 20:46:23,188 (20) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 20:47:24,436 (20) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 20:47:25,305 (20) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 20:47:25,310 (20) [ERROR] ClientHandler.cs - System.NullReferenceException: Object reference not set to an instance of an object.
+   at New_SSL_Server.ClientHandler.Logout(Boolean clientSide, LoginInformation logout) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 379
+   at New_SSL_Server.ClientHandler.LoginManager(Message M) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 278
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 128
+2022-04-29 20:47:25,310 (20) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 20:47:25,310 (20) [INFO ] Server.cs - Client disconnected
+2022-04-29 20:50:49,042 (23) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 20:50:49,054 (23) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 20:50:49,314 (21) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 20:51:09,027 (21) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 20:51:10,784 (21) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 20:51:10,790 (21) [ERROR] ClientHandler.cs - System.NullReferenceException: Object reference not set to an instance of an object.
+   at New_SSL_Server.ClientHandler.Logout(Boolean clientSide, LoginInformation logout) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 379
+   at New_SSL_Server.ClientHandler.LoginManager(Message M) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 278
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 128
+2022-04-29 20:51:10,790 (21) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 20:51:10,790 (21) [INFO ] Server.cs - Client disconnected
+2022-04-29 20:52:00,621 (17) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 20:52:00,631 (17) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 20:52:00,939 (26) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 20:52:11,993 (26) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 20:53:32,180 (26) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 20:54:30,543 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-29 20:54:30,586 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-29 20:54:47,672 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-29 20:54:49,820 (4) [INFO ] Server.cs - Server instance started
+2022-04-29 20:54:51,361 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 20:55:03,774 (27) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 20:55:03,788 (27) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 20:55:04,059 (26) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 20:55:20,666 (26) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 20:55:24,155 (26) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 20:58:14,256 (26) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamReader.ReadBuffer()
+   at System.IO.StreamReader.ReadLine()
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 116
+2022-04-29 20:58:14,256 (26) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 20:58:14,266 (26) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Security._SslStream.StartWriting(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+   at System.IO.StreamWriter.Flush()
+   at New_SSL_Server.ClientHandler.SendMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 411
+2022-04-29 20:58:14,266 (26) [ERROR] ClientHandler.cs - Client already disconnected
+2022-04-29 20:58:14,266 (26) [INFO ] Server.cs - Client disconnected
+2022-04-29 20:58:16,092 (34) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 20:58:16,101 (34) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 20:58:16,352 (33) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 20:58:27,223 (33) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 20:58:28,815 (33) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 20:59:20,241 (33) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamReader.ReadBuffer()
+   at System.IO.StreamReader.ReadLine()
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 116
+2022-04-29 20:59:20,241 (33) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 20:59:20,248 (33) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Security._SslStream.StartWriting(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+   at System.IO.StreamWriter.Flush()
+   at New_SSL_Server.ClientHandler.SendMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 411
+2022-04-29 20:59:20,248 (33) [ERROR] ClientHandler.cs - Client already disconnected
+2022-04-29 20:59:20,248 (33) [INFO ] Server.cs - Client disconnected
+2022-04-29 20:59:21,817 (38) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 20:59:21,827 (38) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 20:59:22,053 (39) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 20:59:34,273 (39) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 20:59:37,196 (39) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 20:59:39,045 (39) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 20:59:43,462 (38) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 20:59:43,471 (38) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 20:59:43,678 (33) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 20:59:58,265 (33) [INFO ] AuthenticationInformation.cs - User already logged in
+2022-04-29 21:00:07,092 (33) [INFO ] AuthenticationInformation.cs - User already logged in
+2022-04-29 21:00:24,507 (33) [INFO ] AuthenticationInformation.cs - User already logged in
+2022-04-29 21:00:58,275 (33) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:00:58,275 (33) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:01:00,411 (33) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:01:00,411 (33) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:01:01,403 (39) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamReader.ReadBuffer()
+   at System.IO.StreamReader.ReadLine()
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 116
+2022-04-29 21:01:01,403 (39) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 21:01:01,410 (39) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Security._SslStream.StartWriting(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+   at System.IO.StreamWriter.Flush()
+   at New_SSL_Server.ClientHandler.SendMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 411
+2022-04-29 21:01:01,411 (39) [ERROR] ClientHandler.cs - Client already disconnected
+2022-04-29 21:01:01,411 (39) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:01:05,519 (33) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamReader.ReadBuffer()
+   at System.IO.StreamReader.ReadLine()
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 116
+2022-04-29 21:01:05,519 (33) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 21:01:05,525 (33) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Security._SslStream.StartWriting(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+   at System.IO.StreamWriter.Flush()
+   at New_SSL_Server.ClientHandler.SendMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 411
+2022-04-29 21:01:05,526 (33) [ERROR] ClientHandler.cs - Client already disconnected
+2022-04-29 21:01:05,526 (33) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:01:09,258 (34) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 21:01:09,269 (34) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 21:01:09,507 (35) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 21:01:36,591 (35) [INFO ] AuthenticationInformation.cs - User already logged in
+2022-04-29 21:01:46,238 (35) [INFO ] AuthenticationInformation.cs - User already logged in
+2022-04-29 21:01:52,319 (1) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 21:01:52,319 (1) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:01:52,319 (1) [INFO ] Program.cs - Server killed
+2022-04-29 21:01:52,332 (4) [INFO ] Server.cs - Potential server closing view error for more info: System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-29 21:01:55,589 (35) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:01:55,589 (35) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:01:58,076 (27) [INFO ] Server.cs - Server instance started
+2022-04-29 21:02:04,436 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 21:02:06,644 (35) [ERROR] ClientHandler.cs - System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 21:02:06,658 (35) [ERROR] ClientHandler.cs - System.ArgumentNullException: Value cannot be null.
+Parameter name: input
+   at System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Deserialize[T](String input)
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 121
+2022-04-29 21:02:06,658 (35) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 21:02:06,658 (35) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:02:07,530 (25) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 21:02:07,542 (25) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 21:02:07,818 (30) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 21:02:22,959 (30) [INFO ] AuthenticationInformation.cs - User already logged in
+2022-04-29 21:02:32,265 (30) [INFO ] AuthenticationInformation.cs - User already logged in
+2022-04-29 21:03:03,992 (1) [INFO ] AuthenticationInformation.cs - Users setup
+2022-04-29 21:03:04,036 (1) [INFO ] AuthenticationInformation.cs - Admins setup
+2022-04-29 21:03:10,176 (1) [INFO ] Program.cs - AdminTest logged in
+2022-04-29 21:03:10,824 (4) [INFO ] Server.cs - Server instance started
+2022-04-29 21:03:12,527 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 21:03:15,863 (28) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 21:03:15,876 (28) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 21:03:16,121 (29) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 21:03:26,693 (29) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 21:03:29,957 (28) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 21:03:29,964 (28) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 21:03:30,132 (16) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 21:03:48,188 (16) [INFO ] AuthenticationInformation.cs - User already logged in
+2022-04-29 21:06:28,325 (29) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 21:08:28,536 (29) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 21:08:30,100 (29) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 21:08:30,100 (29) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:08:30,100 (29) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:08:30,149 (29) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:08:30,149 (29) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:08:50,122 (16) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 21:09:02,945 (16) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 21:09:10,670 (16) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 21:09:11,787 (16) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 21:09:11,787 (16) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:09:11,787 (16) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:09:11,836 (16) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:09:11,836 (16) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:10:56,920 (40) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 21:10:56,928 (40) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 21:10:57,164 (42) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 21:11:31,490 (42) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 21:11:35,344 (1) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 21:11:35,344 (1) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:11:35,344 (1) [INFO ] Program.cs - Server killed
+2022-04-29 21:11:35,355 (4) [INFO ] Server.cs - Potential server closing view error for more info: System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-29 21:14:59,624 (42) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 21:14:59,624 (42) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:14:59,624 (42) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:15:08,069 (42) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:15:08,069 (42) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:15:08,116 (42) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamReader.ReadBuffer()
+   at System.IO.StreamReader.ReadLine()
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 116
+2022-04-29 21:15:08,116 (42) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 21:15:08,129 (42) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Security._SslStream.StartWriting(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+   at System.IO.StreamWriter.Flush()
+   at New_SSL_Server.ClientHandler.SendMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 411
+2022-04-29 21:15:08,129 (42) [ERROR] ClientHandler.cs - Client already disconnected
+2022-04-29 21:15:08,129 (42) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:19:32,574 (28) [INFO ] Server.cs - Server instance started
+2022-04-29 21:19:35,370 (46) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 21:19:35,380 (46) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 21:19:35,640 (38) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 21:20:33,626 (38) [INFO ] AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-29 21:20:33,684 (38) [INFO ] AuthenticationInformation.cs - User database updated
+2022-04-29 21:20:47,721 (38) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 21:20:53,613 (43) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 21:20:53,620 (43) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 21:20:53,842 (32) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 21:21:21,407 (32) [INFO ] AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-29 21:21:21,411 (32) [INFO ] AuthenticationInformation.cs - User database updated
+2022-04-29 21:21:38,296 (32) [INFO ] AuthenticationInformation.cs - User successfully logged in
+2022-04-29 21:22:59,721 (1) [ERROR] Program.cs - Attempted to deploy server with server instance already running
+2022-04-29 21:23:01,540 (1) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 21:23:01,541 (1) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:23:01,541 (1) [INFO ] Program.cs - Server killed
+2022-04-29 21:23:01,549 (28) [INFO ] Server.cs - Potential server closing view error for more info: System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 87
+2022-04-29 21:23:05,957 (38) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 21:23:05,957 (38) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:23:05,957 (38) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:23:08,174 (32) [INFO ] AuthenticationInformation.cs - User successfully logged out
+2022-04-29 21:23:08,174 (32) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:23:08,174 (32) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:23:12,055 (32) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:23:12,055 (32) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:23:14,438 (38) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:23:14,438 (38) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:23:15,855 (38) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 21:23:15,855 (38) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:23:16,688 (32) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamReader.ReadBuffer()
+   at System.IO.StreamReader.ReadLine()
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 116
+2022-04-29 21:23:16,688 (32) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 21:23:16,695 (32) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Security._SslStream.StartWriting(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+   at System.IO.StreamWriter.Flush()
+   at New_SSL_Server.ClientHandler.SendMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 411
+2022-04-29 21:23:16,695 (32) [ERROR] ClientHandler.cs - Client already disconnected
+2022-04-29 21:23:16,695 (32) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:23:20,023 (38) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamReader.ReadBuffer()
+   at System.IO.StreamReader.ReadLine()
+   at New_SSL_Server.ClientHandler.ReadMessage() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 116
+2022-04-29 21:23:20,024 (38) [INFO ] ClientHandler.cs - Client disconnected
+2022-04-29 21:23:20,035 (38) [ERROR] ClientHandler.cs - System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Security._SslStream.StartWriting(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+   at System.IO.StreamWriter.Flush()
+   at New_SSL_Server.ClientHandler.SendMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 411
+2022-04-29 21:23:20,035 (38) [ERROR] ClientHandler.cs - Client already disconnected
+2022-04-29 21:23:20,035 (38) [INFO ] Server.cs - Client disconnected
+2022-04-29 21:27:06,124 (35) [INFO ] Server.cs - Server instance started
+2022-04-29 21:27:10,767 (43) [INFO ] ClientHandler.cs - Client connection
+2022-04-29 21:27:10,777 (43) [INFO ] ClientHandler.cs - Client SSL authenticated
+2022-04-29 21:27:10,945 (46) [ERROR] ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.DecryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 477
+2022-04-29 23:36:59,761 (46) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 23:36:59,761 (46) [INFO ] Server.cs - Client disconnected
+2022-04-29 23:36:59,811 (46) [INFO ] ClientHandler.cs - Client closed application and disconnected
+2022-04-29 23:36:59,812 (46) [INFO ] Server.cs - Client disconnected

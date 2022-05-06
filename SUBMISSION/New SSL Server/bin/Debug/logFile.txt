@@ -1,0 +1,1080 @@
+2022-04-17 02:29:05,534 [1] INFO  Program.cs - AdminTest logged in
+2022-04-17 02:29:08,136 [4] INFO  Server.cs - Server instance started
+2022-04-17 02:53:18,029 [1] INFO  AuthenticationInformation.cs [(null)] - Users setup
+2022-04-17 02:53:18,082 [1] INFO  AuthenticationInformation.cs [(null)] - Admins setup
+2022-04-17 02:53:36,823 [1] INFO  Program.cs [(null)] - AdminTest logged in
+2022-04-17 02:53:38,130 [4] INFO  Server.cs [(null)] - Server instance started
+2022-04-19 22:02:52,805 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-19 22:02:52,851 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-19 22:03:05,818 [1] INFO  AuthenticationInformation.cs - SearchServerAuth no results found
+2022-04-19 22:03:05,824 [1] INFO  Authenticator.cs - Invalid admin log in attempt
+2022-04-19 22:03:26,629 [1] INFO  Program.cs - AdminTest logged in
+2022-04-19 22:03:28,705 [4] INFO  Server.cs - Server instance started
+2022-04-19 22:10:58,411 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-19 22:10:58,456 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-19 22:11:06,953 [1] INFO  Program.cs - AdminTest logged in
+2022-04-19 22:11:09,475 [4] INFO  Server.cs - Server instance started
+2022-04-19 22:11:11,447 [29] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:12:01,282 [29] INFO  ClientHandler.cs - Client disconnected
+2022-04-19 22:12:01,284 [29] INFO  Server.cs - Client disconnected
+2022-04-19 22:13:29,704 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-19 22:13:29,746 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-19 22:13:37,094 [1] INFO  Program.cs - AdminTest logged in
+2022-04-19 22:13:38,178 [4] INFO  Server.cs - Server instance started
+2022-04-19 22:13:46,258 [31] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:14:08,995 [31] INFO  ClientHandler.cs - Client disconnected
+2022-04-19 22:14:08,996 [31] INFO  Server.cs - Client disconnected
+2022-04-19 22:14:16,215 [30] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:14:26,883 [33] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:15:19,783 [33] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-19 22:15:19,915 [33] INFO  AuthenticationInformation.cs - User database updated
+2022-04-19 22:15:27,634 [33] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-19 22:15:34,771 [30] INFO  ClientHandler.cs - Client disconnected
+2022-04-19 22:15:34,772 [30] INFO  Server.cs - Client disconnected
+2022-04-19 22:15:46,617 [40] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:15:49,652 [42] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:15:50,586 [40] INFO  ClientHandler.cs - Client disconnected
+2022-04-19 22:15:50,587 [40] INFO  Server.cs - Client disconnected
+2022-04-19 22:15:56,753 [43] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:15:57,478 [42] INFO  AuthenticationInformation.cs - User already logged in
+2022-04-19 22:16:26,698 [43] INFO  ClientHandler.cs - Client disconnected
+2022-04-19 22:16:26,700 [43] INFO  Server.cs - Client disconnected
+2022-04-19 22:16:30,599 [45] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:16:35,200 [45] INFO  ClientHandler.cs - Client disconnected
+2022-04-19 22:16:35,201 [45] INFO  Server.cs - Client disconnected
+2022-04-19 22:16:38,329 [47] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:16:47,595 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-19 22:16:47,644 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-19 22:16:54,247 [1] INFO  Program.cs - AdminTest logged in
+2022-04-19 22:16:55,379 [4] INFO  Server.cs - Server instance started
+2022-04-19 22:17:01,825 [31] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:17:29,578 [31] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-19 22:17:29,709 [31] INFO  AuthenticationInformation.cs - User database updated
+2022-04-19 22:17:41,959 [31] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-19 22:17:49,843 [31] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-19 22:17:57,918 [32] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-19 22:18:03,572 [32] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-19 22:26:26,298 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-19 22:26:26,346 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-19 22:26:37,258 [1] INFO  Program.cs - AdminTest logged in
+2022-04-19 22:26:38,064 [4] INFO  Server.cs - Server instance started
+2022-04-21 16:43:06,227 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-21 16:43:06,275 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-21 16:43:14,003 [1] INFO  Program.cs - AdminTest logged in
+2022-04-21 16:43:15,183 [4] INFO  Server.cs - Server instance started
+2022-04-21 16:47:32,504 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-21 16:47:32,549 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-21 16:47:40,866 [1] INFO  Program.cs - AdminTest logged in
+2022-04-21 16:47:42,148 [4] INFO  Server.cs - Server instance started
+2022-04-21 16:50:06,530 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-21 16:50:06,571 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-21 16:50:13,966 [1] INFO  Program.cs - AdminTest logged in
+2022-04-21 16:50:15,913 [4] INFO  Server.cs - Server instance started
+2022-04-21 17:07:08,392 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-21 17:07:08,434 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-21 17:07:18,980 [1] INFO  Authenticator.cs - Invalid admin log in attempt
+2022-04-21 17:07:27,757 [1] INFO  Program.cs - AdminTest logged in
+2022-04-21 17:07:28,488 [4] INFO  Server.cs - Server instance started
+2022-04-21 17:07:47,621 [26] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 17:08:08,070 [17] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 17:08:52,214 [26] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-21 17:08:52,331 [26] INFO  AuthenticationInformation.cs - User database updated
+2022-04-21 17:08:57,820 [17] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-21 17:08:57,825 [17] INFO  AuthenticationInformation.cs - User database updated
+2022-04-21 17:09:03,930 [26] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 17:09:22,094 [17] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 17:25:36,176 [37] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 17:26:20,751 [37] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-21 17:26:20,762 [37] INFO  AuthenticationInformation.cs - User database updated
+2022-04-21 17:26:55,514 [37] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 17:27:20,544 [17] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 17:27:20,545 [17] INFO  Server.cs - Client disconnected
+2022-04-21 20:24:33,223 [50] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:26:24,249 [50] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-21 20:26:24,255 [50] INFO  AuthenticationInformation.cs - User database updated
+2022-04-21 20:26:45,159 [50] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 20:26:58,540 [23] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:27:18,566 [26] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 20:27:18,567 [26] INFO  Server.cs - Client disconnected
+2022-04-21 20:27:18,867 [37] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 20:27:18,868 [37] INFO  Server.cs - Client disconnected
+2022-04-21 20:28:02,826 [23] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-21 20:28:02,832 [23] INFO  AuthenticationInformation.cs - User database updated
+2022-04-21 20:28:09,509 [23] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 20:28:26,355 [44] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:28:46,636 [44] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-21 20:28:46,641 [44] INFO  AuthenticationInformation.cs - User database updated
+2022-04-21 20:29:00,376 [44] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-21 20:29:08,150 [44] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 20:39:54,650 [50] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 20:39:54,651 [50] INFO  Server.cs - Client disconnected
+2022-04-21 20:46:07,067 [43] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:46:07,068 [35] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:46:07,092 [46] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:46:07,095 [29] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:46:07,109 [24] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:46:07,119 [25] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:46:07,156 [47] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:46:07,197 [30] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:46:07,205 [22] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:46:07,217 [34] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:46:20,999 [41] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:46:33,417 [41] INFO  AuthenticationInformation.cs - User already logged in
+2022-04-21 20:46:37,659 [41] INFO  AuthenticationInformation.cs - User already logged in
+2022-04-21 20:46:46,157 [41] INFO  AuthenticationInformation.cs - User already logged in
+2022-04-21 20:46:48,001 [41] INFO  AuthenticationInformation.cs - User already logged in
+2022-04-21 20:46:56,539 [26] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:47:28,823 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-21 20:47:28,865 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-21 20:47:42,678 [1] INFO  Program.cs - AdminTest logged in
+2022-04-21 20:47:43,401 [4] INFO  Server.cs - Server instance started
+2022-04-21 20:47:43,771 [31] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:47:46,280 [33] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:47:52,368 [31] ERROR ClientHandler.cs - System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:47:52,378 [31] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 20:47:52,379 [31] INFO  Server.cs - Client disconnected
+2022-04-21 20:47:57,607 [33] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 20:48:00,895 [18] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:48:00,897 [15] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:48:00,906 [17] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:48:00,916 [16] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:48:00,923 [32] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:48:00,930 [30] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:48:00,942 [34] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:48:00,947 [35] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:48:00,954 [36] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:48:00,964 [37] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:48:04,443 [33] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 20:48:04,443 [33] INFO  Server.cs - Client disconnected
+2022-04-21 20:49:00,995 [17] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:49:20,657 [17] INFO  AuthenticationInformation.cs - User already logged in
+2022-04-21 20:49:23,939 [17] INFO  AuthenticationInformation.cs - User already logged in
+2022-04-21 20:49:31,196 [17] INFO  AuthenticationInformation.cs - User already logged in
+2022-04-21 20:49:33,143 [17] INFO  AuthenticationInformation.cs - User already logged in
+2022-04-21 20:49:37,296 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-21 20:49:37,343 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-21 20:49:46,161 [1] INFO  Program.cs - AdminTest logged in
+2022-04-21 20:49:46,852 [4] INFO  Server.cs - Server instance started
+2022-04-21 20:49:49,744 [30] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:49,744 [31] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:49,744 [32] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:49,745 [33] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:49,745 [34] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:49,748 [35] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:49,910 [36] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:50,410 [37] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:50,914 [38] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,390 [39] ERROR ClientHandler.cs - System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,402 [40] ERROR ClientHandler.cs - System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,406 [41] ERROR ClientHandler.cs - System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,422 [42] ERROR ClientHandler.cs - System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,438 [44] ERROR ClientHandler.cs - System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,438 [43] ERROR ClientHandler.cs - System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,454 [45] ERROR ClientHandler.cs - System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,456 [46] ERROR ClientHandler.cs - System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,466 [47] ERROR ClientHandler.cs - System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,471 [48] ERROR ClientHandler.cs - System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,484 [50] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,489 [49] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,504 [52] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,504 [51] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,510 [53] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,553 [54] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,585 [55] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,610 [57] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,610 [56] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,610 [58] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,624 [59] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:51,925 [54] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:52,430 [53] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:49:52,933 [52] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,061 [18] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,074 [51] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,081 [50] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,089 [49] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,109 [48] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,118 [47] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,124 [46] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,153 [45] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,163 [44] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,175 [43] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,186 [42] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,208 [41] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,226 [39] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,226 [38] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,226 [40] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,245 [37] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,257 [60] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,245 [36] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,272 [61] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,284 [62] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,295 [63] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,299 [64] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,305 [65] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:02,497 [66] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:03,003 [67] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:03,506 [68] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:04,007 [69] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:04,514 [70] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:05,016 [71] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:05,521 [72] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:06,021 [73] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:50:06,525 [74] ERROR ClientHandler.cs - System.IO.IOException: The handshake failed due to an unexpected packet format.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsServer(X509Certificate serverCertificate, Boolean clientCertificateRequired, SslProtocols enabledSslProtocols, Boolean checkCertificateRevocation)
+   at New_SSL_Server.ClientHandler.SetupConn() in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 43
+2022-04-21 20:52:26,644 [68] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:54:56,916 [65] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 20:55:31,244 [65] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 20:55:31,245 [65] INFO  Server.cs - Client disconnected
+2022-04-21 20:57:10,634 [68] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 20:57:10,634 [68] INFO  Server.cs - Client disconnected
+2022-04-21 21:01:52,261 [38] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 21:01:58,227 [38] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:01:58,227 [38] INFO  Server.cs - Client disconnected
+2022-04-21 21:03:32,696 [59] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\New SSL Server\CS Files\Client\ClientHandler.cs:line 327
+2022-04-21 21:03:37,745 [59] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:03:37,746 [59] INFO  Server.cs - Client disconnected
+2022-04-21 21:18:03,654 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-21 21:18:03,696 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-21 21:18:12,985 [1] INFO  Program.cs - AdminTest logged in
+2022-04-21 21:18:13,684 [4] INFO  Server.cs - Server instance started
+2022-04-21 21:18:22,303 [31] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 341
+2022-04-21 21:18:36,754 [31] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:18:46,302 [31] INFO  Server.cs - Client disconnected
+2022-04-21 21:18:46,486 [36] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 341
+2022-04-21 21:19:06,170 [36] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-21 21:19:06,283 [36] INFO  AuthenticationInformation.cs - User database updated
+2022-04-21 21:19:21,212 [36] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 21:20:35,254 [36] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:20:54,363 [40] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 341
+2022-04-21 21:20:56,623 [36] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-21 21:20:56,623 [36] INFO  Server.cs - Client disconnected
+2022-04-21 21:21:37,260 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-21 21:21:37,303 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-21 21:21:44,582 [1] INFO  Program.cs - AdminTest logged in
+2022-04-21 21:21:45,258 [4] INFO  Server.cs - Server instance started
+2022-04-21 21:21:48,382 [31] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 341
+2022-04-21 21:22:13,969 [31] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 21:22:46,550 [31] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:22:50,227 [31] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-21 21:22:50,234 [31] INFO  Server.cs - Client disconnected
+2022-04-21 21:23:02,121 [33] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 341
+2022-04-21 21:23:30,454 [33] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 21:24:28,713 [33] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-21 21:24:49,136 [33] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:26:08,435 [33] INFO  Server.cs - Client disconnected
+2022-04-21 21:26:17,967 [42] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 341
+2022-04-21 21:26:31,001 [42] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 21:26:46,208 [42] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:30:32,163 [42] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-21 21:30:32,166 [42] INFO  Server.cs - Client disconnected
+2022-04-21 21:30:38,528 [64] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 341
+2022-04-21 21:30:52,145 [64] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 21:30:57,428 [64] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-21 21:31:50,824 [64] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:31:50,825 [64] INFO  Server.cs - Client disconnected
+2022-04-21 21:32:04,225 [62] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 341
+2022-04-21 21:32:15,619 [62] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 21:32:18,669 [62] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-21 21:33:32,855 [62] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:33:32,856 [62] INFO  Server.cs - Client disconnected
+2022-04-21 21:33:36,170 [68] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 341
+2022-04-21 21:33:42,598 [68] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:33:42,599 [68] INFO  Server.cs - Client disconnected
+2022-04-21 21:33:56,785 [39] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Desktop\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 341
+2022-04-21 21:34:10,047 [39] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 21:34:14,298 [39] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-21 21:34:16,441 [39] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 21:34:17,549 [39] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-21 21:34:19,507 [39] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-21 21:34:24,360 [39] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-21 21:34:27,571 [39] INFO  ClientHandler.cs - Client disconnected
+2022-04-21 21:34:27,572 [39] INFO  Server.cs - Client disconnected
+2022-04-22 16:38:12,903 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-22 16:38:12,950 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-22 16:38:25,814 [1] INFO  Program.cs - AdminTest logged in
+2022-04-22 16:38:27,017 [4] INFO  Server.cs - Server instance started
+2022-04-22 16:39:23,300 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-22 16:39:23,342 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-22 16:39:45,302 [1] INFO  Program.cs - AdminTest logged in
+2022-04-22 16:39:45,941 [4] INFO  Server.cs - Server instance started
+2022-04-22 16:52:47,583 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-22 16:52:47,630 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-22 16:53:02,268 [1] INFO  Program.cs - AdminTest logged in
+2022-04-22 16:53:19,622 [4] INFO  Server.cs - Server instance started
+2022-04-22 16:53:21,807 [33] INFO  ClientHandler.cs - Client connection
+2022-04-22 16:53:21,834 [33] INFO  ClientHandler.cs - Client SSL authenticated
+2022-04-22 16:53:22,388 [34] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 347
+2022-04-22 16:53:39,762 [34] INFO  AuthenticationInformation.cs - ClientLookupRequest no results found
+2022-04-22 16:53:39,910 [34] INFO  AuthenticationInformation.cs - User database updated
+2022-04-22 16:54:02,928 [34] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-22 17:05:31,029 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-22 17:05:31,073 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-22 17:05:39,577 [1] INFO  Program.cs - AdminTest logged in
+2022-04-22 17:05:40,087 [4] INFO  Server.cs - Server instance started
+2022-04-22 17:05:44,577 [30] INFO  ClientHandler.cs - Client connection
+2022-04-22 17:05:44,591 [30] INFO  ClientHandler.cs - Client SSL authenticated
+2022-04-22 17:05:44,852 [31] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 362
+2022-04-22 17:05:58,112 [31] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-22 17:06:25,528 [1] INFO  ClientHandler.cs - Client disconnected
+2022-04-22 17:06:45,540 [31] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-22 17:06:53,040 [1] INFO  Server.cs - Client disconnected
+2022-04-22 17:08:05,008 [31] ERROR ClientHandler.cs - System.IO.IOException: Unable to read data from the transport connection: A blocking operation was interrupted by a call to WSACancelBlockingCall. ---> System.Net.Sockets.SocketException: A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamReader.ReadBuffer()
+   at System.IO.StreamReader.ReadLine()
+   at New_SSL_Server.ClientHandler.ReadMessage()
+2022-04-22 17:08:05,875 [31] INFO  ClientHandler.cs - Client disconnected
+2022-04-22 17:09:20,339 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-22 17:09:20,382 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-22 17:09:30,634 [1] INFO  Program.cs - AdminTest logged in
+2022-04-22 17:09:47,771 [4] INFO  Server.cs - Server instance started
+2022-04-22 17:09:49,629 [15] INFO  ClientHandler.cs - Client connection
+2022-04-22 17:09:49,641 [15] INFO  ClientHandler.cs - Client SSL authenticated
+2022-04-22 17:09:49,872 [16] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 372
+2022-04-22 17:10:02,129 [16] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-22 17:10:22,920 [1] INFO  ClientHandler.cs - Client disconnected
+2022-04-22 17:10:46,056 [16] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-22 17:10:50,129 [1] INFO  Server.cs - Client disconnected
+2022-04-22 17:11:09,676 [4] INFO  Server.cs - Potential server closing view error for more info
+2022-04-22 17:11:29,950 [1] INFO  Program.cs - Server killed
+2022-04-22 17:11:29,956 [4] ERROR Server.cs - System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 66
+2022-04-22 17:12:37,486 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-22 17:12:37,532 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-22 17:12:45,206 [1] INFO  Program.cs - AdminTest logged in
+2022-04-22 17:12:45,895 [4] INFO  Server.cs - Server instance started
+2022-04-22 17:12:48,111 [28] INFO  ClientHandler.cs - Client connection
+2022-04-22 17:12:48,123 [28] INFO  ClientHandler.cs - Client SSL authenticated
+2022-04-22 17:12:48,387 [29] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 372
+2022-04-22 17:13:08,968 [29] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-22 17:13:16,910 [1] INFO  ClientHandler.cs - Client disconnected
+2022-04-22 17:13:16,912 [1] INFO  Server.cs - Client disconnected
+2022-04-22 17:13:16,913 [1] INFO  Program.cs - Server killed
+2022-04-22 17:13:16,924 [4] INFO  Server.cs - Potential server closing view error for more info
+2022-04-22 17:13:27,655 [29] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-22 17:13:31,183 [4] ERROR Server.cs - System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 66
+2022-04-22 17:14:43,370 [1] INFO  AuthenticationInformation.cs - Users setup
+2022-04-22 17:14:43,411 [1] INFO  AuthenticationInformation.cs - Admins setup
+2022-04-22 17:14:52,285 [1] INFO  Program.cs - AdminTest logged in
+2022-04-22 17:14:53,528 [4] INFO  Server.cs - Server instance started
+2022-04-22 17:14:55,513 [30] INFO  ClientHandler.cs - Client connection
+2022-04-22 17:14:55,524 [30] INFO  ClientHandler.cs - Client SSL authenticated
+2022-04-22 17:14:55,795 [31] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 372
+2022-04-22 17:15:12,429 [31] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-22 17:15:17,598 [1] INFO  ClientHandler.cs - Client disconnected
+2022-04-22 17:15:17,600 [1] INFO  Server.cs - Client disconnected
+2022-04-22 17:15:17,600 [1] INFO  Program.cs - Server killed
+2022-04-22 17:15:19,956 [4] INFO  Server.cs - Potential server closing view error for more info
+2022-04-22 17:15:21,298 [4] ERROR Server.cs - System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 66
+2022-04-22 17:15:28,748 [40] INFO  Server.cs - Server instance started
+2022-04-22 17:15:32,186 [31] INFO  AuthenticationInformation.cs - User successfully logged out
+2022-04-22 17:15:34,411 [41] INFO  ClientHandler.cs - Client connection
+2022-04-22 17:15:34,420 [41] INFO  ClientHandler.cs - Client SSL authenticated
+2022-04-22 17:15:34,652 [42] ERROR ClientHandler.cs - System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at New_SSL_Server.ClientHandler.decryptMessage(String message) in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client\ClientHandler.cs:line 372
+2022-04-22 17:15:48,781 [42] INFO  AuthenticationInformation.cs - User successfully logged in
+2022-04-22 17:15:49,809 [42] INFO  AuthenticationInformation.cs - User already logged in
+2022-04-22 17:16:19,562 [1] INFO  ClientHandler.cs - Client disconnected
+2022-04-22 17:16:19,564 [1] INFO  Server.cs - Client disconnected
+2022-04-22 17:16:19,565 [1] INFO  Program.cs - Server killed
+2022-04-22 17:16:19,572 [40] INFO  Server.cs - Potential server closing view error for more info
+2022-04-22 17:16:19,575 [40] ERROR Server.cs - System.Net.Sockets.SocketException (0x80004005): A blocking operation was interrupted by a call to WSACancelBlockingCall
+   at System.Net.Sockets.Socket.Accept()
+   at System.Net.Sockets.TcpListener.AcceptTcpClient()
+   at New_SSL_Server.Server.Listen() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Server\Server.cs:line 66
+2022-04-22 17:16:21,045 [35] INFO  Server.cs - Server instance started

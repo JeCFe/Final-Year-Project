@@ -1,3 +1,0 @@
-2022-04-23 01:15:11,414 [1] INFO  AuthenticationInformation.cs - Users setup
-2022-04-23 01:15:11,460 [1] INFO  AuthenticationInformation.cs - Admins setup
-2022-04-23 01:15:18,068 [1] INFO  Program.cs - AdminTest logged in
