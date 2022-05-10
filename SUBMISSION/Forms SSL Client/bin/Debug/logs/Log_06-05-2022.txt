@@ -88,3 +88,7 @@
 2022-05-06 14:50:11,335 (1) [INFO ] Main Program - Message sent to server
 2022-05-06 14:50:11,338 (4) [INFO ] Main Program - Message recieved
 2022-05-06 14:50:11,339 (4) [INFO ] Main Program - Message recieved
+2022-05-06 15:43:44,473 (1) [INFO ] Main Program - User logging out
+2022-05-06 15:43:44,520 (1) [INFO ] Main Program - Message sent to server
+2022-05-06 15:43:44,521 (1) [INFO ] Main Program - User logging out
+2022-05-06 15:43:44,522 (1) [INFO ] Main Program - Message sent to server

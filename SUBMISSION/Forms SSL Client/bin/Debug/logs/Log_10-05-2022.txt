@@ -1,0 +1,124 @@
+2022-05-10 17:21:28,663 (1) [ERROR] Main Program - System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 81.101.122.94:2556
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Forms_SSL_Client.Form1.InitaliseServerConnection() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\Forms SSL Client\Form1.cs:line 69
+2022-05-10 17:21:42,166 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:21:42,309 (1) [ERROR] Main Program - Error sending message to server
+2022-05-10 17:21:42,310 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:21:42,310 (1) [ERROR] Main Program - Error sending message to server
+2022-05-10 17:23:13,808 (1) [ERROR] Main Program - System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 81.101.122.94:2556
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Forms_SSL_Client.Form1.InitaliseServerConnection() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\Forms SSL Client\Form1.cs:line 69
+2022-05-10 17:23:51,310 (1) [INFO ] Main Program - Connected to server
+2022-05-10 17:23:51,467 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:23:53,654 (1) [INFO ] Main Program - Connected to server
+2022-05-10 17:23:53,674 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:24:36,082 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:24:36,083 (1) [INFO ] Main Program - Server has stopped
+2022-05-10 17:24:37,937 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:24:37,938 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:24:59,337 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:25:03,397 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:25:03,397 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:25:03,398 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:25:03,398 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:25:04,924 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:25:04,925 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:25:04,926 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:25:04,926 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:25:21,840 (1) [INFO ] Main Program - Connected to server
+2022-05-10 17:25:21,860 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:25:22,853 (1) [INFO ] Main Program - Connected to server
+2022-05-10 17:25:22,872 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:25:52,496 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:25:52,500 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:25:52,779 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:25:52,878 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:25:52,878 (1) [INFO ] Main Program - Server successfully added account
+2022-05-10 17:26:11,230 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:26:11,235 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:26:11,760 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:26:12,211 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:26:12,331 (1) [INFO ] Main Program - User logged in
+2022-05-10 17:26:40,057 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:26:40,062 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:26:40,620 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:26:41,043 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:26:41,048 (1) [INFO ] Main Program - Issue logging user in
+2022-05-10 17:27:16,878 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:27:16,882 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:27:17,149 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:27:17,151 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:27:17,152 (1) [ERROR] Main Program - Error with registrating account
+2022-05-10 17:27:38,729 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:27:38,734 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:27:38,992 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:27:38,998 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:27:38,999 (1) [INFO ] Main Program - Server successfully added account
+2022-05-10 17:28:04,919 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:04,925 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:05,442 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:05,873 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:06,000 (1) [INFO ] Main Program - User logged in
+2022-05-10 17:28:16,689 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:16,694 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:16,695 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:33,105 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:33,109 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:33,110 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:36,920 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:39,902 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:46,465 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:46,469 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:47,008 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:47,443 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:47,472 (1) [INFO ] Main Program - User logged in
+2022-05-10 17:28:49,586 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:49,592 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:50,116 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:50,562 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:50,563 (1) [INFO ] Main Program - Issue logging user in
+2022-05-10 17:28:58,052 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:58,057 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:58,607 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:28:59,032 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:28:59,052 (1) [INFO ] Main Program - User logged in
+2022-05-10 17:29:43,233 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:29:53,754 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:29:53,758 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:29:53,759 (1) [INFO ] Main Program - No email found
+2022-05-10 17:30:03,819 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:30:03,823 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:30:04,087 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:30:04,092 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:30:04,092 (1) [INFO ] Main Program - Server successfully added account
+2022-05-10 17:30:07,337 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:30:07,341 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:30:07,882 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:30:08,304 (4) [INFO ] Main Program - Message recieved
+2022-05-10 17:30:08,324 (1) [INFO ] Main Program - User logged in
+2022-05-10 17:30:14,955 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:30:15,140 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:30:15,141 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:30:15,141 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:30:25,419 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:30:36,027 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:30:36,028 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:30:36,028 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:30:36,028 (1) [INFO ] Main Program - Message sent to server
+2022-05-10 17:33:27,592 (1) [ERROR] Main Program - System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.AuthenticateAsClient(String targetHost)
+   at Forms_SSL_Client.Form1.InitaliseServerConnection() in C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\Forms SSL Client\Form1.cs:line 72
+2022-05-10 17:33:30,808 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:33:31,295 (1) [ERROR] Main Program - Error sending message to server
+2022-05-10 17:33:31,323 (1) [INFO ] Main Program - User logging out
+2022-05-10 17:33:31,358 (1) [ERROR] Main Program - Error sending message to server
+2022-05-10 17:34:00,043 (1) [INFO ] Main Program - Connected to server
+2022-05-10 17:34:32,324 (4) [INFO ] Main Program - Message recieved

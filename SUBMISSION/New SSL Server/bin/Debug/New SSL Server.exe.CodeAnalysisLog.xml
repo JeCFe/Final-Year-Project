@@ -2,11 +2,11 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="16.0">
  <Targets>
-  <Target Name="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\bin\Debug\New SSL Server.exe">
+  <Target Name="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\New SSL Server\bin\Debug\New SSL Server.exe">
    <Modules>
     <Module Name="new ssl server.exe">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2022-05-06 01:51:32Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2022-05-10 16:17:38Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'New SSL Server.exe' with a strong name key.</Issue>
       </Message>
      </Messages>
@@ -17,20 +17,20 @@
          <Members>
           <Member Name="#DecryptMessage(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-05-06 01:51:32Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="490">Object 'cs' can be disposed more than once in method 'ClientHandler.DecryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 490</Issue>
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="490">Object 'ms' can be disposed more than once in method 'ClientHandler.DecryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 490, 491</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-05-10 16:17:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="490">Object 'cs' can be disposed more than once in method 'ClientHandler.DecryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 490</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="490">Object 'ms' can be disposed more than once in method 'ClientHandler.DecryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 490, 491</Issue>
             </Message>
-            <Message Id="reader" TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500" Status="Active" Created="2022-05-06 01:51:32Z" FixCategory="NonBreaking">
-             <Issue Name="Local" Certainty="95" Level="Error" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="474">'reader', a variable declared in 'ClientHandler.DecryptMessage(string)', has the same name as an instance field on the type. Change the name of one of these items.</Issue>
+            <Message Id="reader" TypeName="VariableNamesShouldNotMatchFieldNames" Category="Microsoft.Maintainability" CheckId="CA1500" Status="Active" Created="2022-05-10 16:17:38Z" FixCategory="NonBreaking">
+             <Issue Name="Local" Certainty="95" Level="Error" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="474">'reader', a variable declared in 'ClientHandler.DecryptMessage(string)', has the same name as an instance field on the type. Change the name of one of these items.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EncryptMessage(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-05-06 01:51:32Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="455">Object 'cs' can be disposed more than once in method 'ClientHandler.EncryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 455</Issue>
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="455">Object 'ms' can be disposed more than once in method 'ClientHandler.EncryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 455, 456</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-05-10 16:17:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="455">Object 'cs' can be disposed more than once in method 'ClientHandler.EncryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 455</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\New SSL Server\CS Files\Client" File="ClientHandler.cs" Line="455">Object 'ms' can be disposed more than once in method 'ClientHandler.EncryptMessage(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 455, 456</Issue>
             </Message>
            </Messages>
           </Member>
@@ -40,9 +40,9 @@
          <Members>
           <Member Name="#GetLogEnteries(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-05-06 01:51:32Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="128">Object 'fileStream' can be disposed more than once in method 'FileHandler.GetLogEnteries(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 127, 128, 129</Issue>
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="127">Object 'streamReader' can be disposed more than once in method 'FileHandler.GetLogEnteries(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 127</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-05-10 16:17:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="128">Object 'fileStream' can be disposed more than once in method 'FileHandler.GetLogEnteries(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 127, 128, 129</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\New SSL Server\CS Files\Misc" File="FileHandler.cs" Line="127">Object 'streamReader' can be disposed more than once in method 'FileHandler.GetLogEnteries(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 127</Issue>
             </Message>
            </Messages>
           </Member>
@@ -52,8 +52,8 @@
          <Members>
           <Member Name="#AdminLogin()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="Authorisation" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2022-05-06 01:51:32Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\0. Current\New SSL Server\CS Files" File="Program.cs" Line="267">Correct the spelling of the unrecognized token 'Authorisation' in the literal '"Authorisation error occurred"'.</Issue>
+            <Message Id="Authorisation" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2022-05-10 16:17:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Jessi\OneDrive\Documents\GitHub\Final-Year-Project\SUBMISSION\New SSL Server\CS Files" File="Program.cs" Line="267">Correct the spelling of the unrecognized token 'Authorisation' in the literal '"Authorisation error occurred"'.</Issue>
             </Message>
            </Messages>
           </Member>
